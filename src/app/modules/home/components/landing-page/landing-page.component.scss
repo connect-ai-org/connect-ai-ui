@@ -1,0 +1,144 @@
+@import "colors";
+
+.section-title {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title::after {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  right: 0;
+  content: '';
+  width: 100px;
+  height: 2px;
+  background: $pale-dogwood;
+  margin: 0 auto;
+}
+
+.section-hero {
+  background-color: $linen;
+
+  .hero {
+    padding: 56px 0 120px;
+
+    .heading-secondary {
+      font-weight: 500;
+      color: $pale-dogwood-shade-30;
+    }
+  }
+}
+
+.section-services {
+  .services {
+    padding: 120px 0 160px;
+
+    .service {
+      padding: 0 24px;
+
+      & > a {
+        position: relative;
+        display: block;
+        color: $outer-space;
+        text-decoration: none;
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.075);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.4s;
+        cursor: pointer;
+  
+        .service-img {
+          width: 100%;
+          height: 250px;
+        }
+
+        .service-img-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 250px;
+          background-color: #000000;
+          opacity: 0;
+          transition: all 0.4s;
+        }
+
+        .service-content {
+          padding: 32px;
+
+          .service-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 48px;
+            position: relative;
+          }
+
+          .service-title::after {
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            right: 0;
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: $champagne-pink;
+            margin-left: 0;
+            visibility: visible;
+          }
+
+          .service-description {
+            margin-bottom: 0;
+          }
+        }
+
+        &:hover {
+          transform: translateY(-1.2rem);
+          box-shadow: 0 32px 64px rgba(0, 0, 0, 0.06);
+          background-color: $linen;
+
+          .service-img-overlay {
+            opacity: 0.35;
+          }
+
+          .service-content {
+            .service-title::after {
+              background: $pale-dogwood-shade-30;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-about {
+  background-color: $linen;
+  padding: 120px 0 160px;
+
+  .about {
+    padding: 0 56px;
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+
+    & > span {
+      font-size: 16px;
+      font-weight: 300;
+      margin-right: 32px;
+    }
+  }
+}
+
+.section-contact {
+  padding: 120px 0 160px;
+
+  .contact-form {
+    padding-top: 20px;
+    width: 600px;
+  }
+}

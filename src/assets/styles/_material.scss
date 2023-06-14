@@ -1,0 +1,39 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/theming';
+
+// MAT FORM FIELD
+mat-form-field {
+  font-size: 14px;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 8px 0 10px;
+}
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: $pale-dogwood;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-start, 
+.mat-form-field-appearance-outline .mat-form-field-outline-gap,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-width: 1px !important;
+}
+.mat-form-field-label-wrapper {
+  top: -16px;
+}
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: $pale-dogwood;
+}
+
+// BUTTON
+.mat-flat-button.mat-primary, 
+.mat-raised-button.mat-primary, 
+.mat-fab.mat-primary, 
+.mat-mini-fab.mat-primary {
+  background-color: $pale-dogwood-shade-30;
+  min-width: 100px;
+}
+.mat-flat-button.mat-primary:not(:disabled):hover, 
+.mat-raised-button.mat-primary:not(:disabled):hover, 
+.mat-fab.mat-primary:not(:disabled):hover, 
+.mat-mini-fab.mat-primary:not(:disabled):hover {
+  background-color: $pale-dogwood;
+}

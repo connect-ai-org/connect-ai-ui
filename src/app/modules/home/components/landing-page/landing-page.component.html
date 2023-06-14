@@ -1,0 +1,100 @@
+<!-- HERO -->
+<section id="section-hero" class="section-hero">
+  <div class="container hero d-flex aligns-item-center justify-content-center">
+    <div class="hero-text-box text-center">
+      <h1 class="heading-primary mb-4">{{ WEBSITE_NAME }}</h1>
+      <h2 class="heading-secondary">
+        &nbsp;
+        <span
+          typingAnimator
+          [sentences]="[SLOGAN]"
+          [typeSpeed]="100"
+          [deleteSpeed]="20"
+          [startDelay]="1000"
+          [showCursor]="false"
+        ></span>
+        &nbsp;
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- SERVICES -->
+<section id="section-services" class="section-services">
+  <div class="container services">
+    <h2 class="section-title heading-secondary text-center">Services</h2>
+    <div class="row pt-4">
+      <div class="col-md-4 service">
+        <a href="#">
+          <img class="service-img" src="assets/images/services/design.jpg" alt="Design Service">
+          <div class="service-img-overlay"></div>
+          <div class="service-content">
+            <p class="service-title">Design</p>
+            <p class="service-description paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet enim alias eos voluptatem corporis consequuntur error porro aliquid repellendus voluptate incidunt quis, atque sapiente cum eius. Hic, alias nobis.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 service">
+        <a href="#">
+          <img class="service-img" src="assets/images/services/digital.jpg" alt="Digital Service">
+          <div class="service-img-overlay"></div>
+          <div class="service-content">
+            <p class="service-title">Digital</p>
+            <p class="service-description paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet enim alias eos voluptatem corporis consequuntur error porro aliquid repellendus voluptate incidunt quis, atque sapiente cum eius. Hic, alias nobis.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 service">
+        <a href="#">
+          <img class="service-img" src="assets/images/services/marketing.jpg" alt="Marketing Service">
+          <div class="service-img-overlay"></div>
+          <div class="service-content">
+            <p class="service-title">Marketing</p>
+            <p class="service-description paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet enim alias eos voluptatem corporis consequuntur error porro aliquid repellendus voluptate incidunt quis, atque sapiente cum eius. Hic, alias nobis.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ABOUT US -->
+<section id="section-about" class="section-about">
+  <div class="container about">
+    <h2 class="section-title heading-secondary text-center">About Us</h2>
+    <p class="paragraph text-center mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum non fugit qui at architecto odio id vero commodi tempore sint! In obcaecati commodi consequuntur accusamus ut quas quo quos voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsa, delectus debitis consequatur a et officia eius alias incidunt voluptatum sit ut odio nostrum autem maxime reiciendis esse iure praesentium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatem illo atque commodi accusantium dolorum qui totam, eos culpa fugit doloribus quas veritatis unde tenetur mollitia ea temporibus. Voluptates, quibusdam.</p>
+    <div class="contact">
+      <span>Contact: sophie@connectai.com</span>
+      <span>Phone: 0414 001 427</span>
+    </div>
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="section-contact" class="section-contact">
+  <div class="container container-contact">
+    <h2 class="section-title heading-secondary text-center">Contact</h2>
+    <div class="contact d-flex aligns-item-center justify-content-center">
+      <form action="" class="contact-form row">
+        <div class="col-md-12">
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>Your name</mat-label>
+            <input matInput placeholder="Your name" >
+          </mat-form-field>
+        </div>
+        <div class="col-md-12">
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>Your email</mat-label>
+            <input matInput placeholder="Your email" >
+          </mat-form-field>
+        </div>
+        <div class="col-md-12">
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>Message</mat-label>
+            <textarea rows="4" matInput placeholder="Message"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="col-md-12 d-flex justify-content-end">
+          <button mat-flat-button color="primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

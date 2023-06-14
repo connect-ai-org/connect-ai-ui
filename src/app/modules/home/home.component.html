@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="container">
+    <a href="#">
+      <img class="logo" src="assets/images/omnifood-logo.png" alt="Connect AI Logo" />
+    </a>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" (click)="scrollToElement('section-hero')"><span>Home</span></a></li>
+        <li><a class="main-nav-link" (click)="scrollToElement('section-services')"><span>Services</span></a></li>
+        <li><a class="main-nav-link" (click)="scrollToElement('section-about')"><span>About Us</span></a></li>
+        <li><a class="main-nav-link" (click)="scrollToElement('section-contact')"><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
