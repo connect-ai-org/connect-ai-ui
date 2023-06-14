@@ -9,7 +9,8 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   isHomePage = false;
-
+  isOpenMenu = false;
+ 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -43,6 +44,10 @@ export class HomeComponent implements OnInit {
       url = url.slice(0, hashIndex);
     }
     this.isHomePage = url === '/';
-  } 
+  }
+
+  onToggleMenu(): void {
+    this.isOpenMenu = !this.isOpenMenu;
+  }
 
 }

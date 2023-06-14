@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 
 .section-title {
   margin-bottom: 60px;
@@ -117,8 +118,23 @@
   background-color: $linen;
   padding: 120px 0 160px;
 
+  .container {
+    @include tablet {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: unset;
+    }
+  }
+
   .about {
     padding: 0 56px;
+
+    @include mobile {
+      padding: 0 16px;
+      .paragraph {
+        text-align: left !important;
+      }
+    }
   }
 
   .contact {
@@ -126,6 +142,10 @@
     align-items: center;
     justify-content: center;
     font-size: 16px;
+
+    @include tablet {
+      flex-direction: column;
+    }
 
     & > span {
       font-size: 16px;
@@ -141,5 +161,33 @@
   .contact-form {
     padding-top: 20px;
     width: 600px;
+  }
+}
+
+@include mobile {
+  .section-hero {
+    .hero {
+      padding: 60px 0;
+    }
+  }
+
+  .section-services {
+    .services {
+      padding: 60px 0;
+    }
+  }
+
+  .section-about {
+    padding: 60px 0;
+  }
+
+  .section-contact {
+    padding: 60px 0;
+
+    .contact-form {
+      .btn-submit {
+        width: 100%;
+      }
+    }
   }
 }

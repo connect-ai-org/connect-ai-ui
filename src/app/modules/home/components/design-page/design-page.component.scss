@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 
 .page-name {
   background-color: $linen;
@@ -48,7 +49,7 @@
       }
 
       .action {
-        margin-top: 40px;
+        margin-top: 28px;
       }
     }
   }
@@ -59,10 +60,62 @@
   overflow: hidden;
   .img {
     width: 100%;
+    height: 100%;
     transition: all 0.4s;
   }
 
   .img:hover {
     transform: scale(1.1);
+  }
+}
+
+@include tablet {
+  .page-content {
+    .container {
+      max-width: unset;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    .items {
+      .item {
+        flex-direction: column-reverse;
+
+        .text-box {
+          padding: 32px;
+        }
+      }
+    }
+  }
+
+  .img-box {
+    .img {
+      height: 450px;
+    }
+  }
+}
+
+@include mobile {
+  .page-content {
+    .container {
+      max-width: unset;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .items {
+      .item {
+        flex-direction: column-reverse;
+
+        .text-box {
+          padding: 16px;
+        }
+      }
+    }
+  }
+  .img-box {
+    .img {
+      height: unset;
+    }
   }
 }

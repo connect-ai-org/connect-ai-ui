@@ -27,7 +27,7 @@
     </div> -->
     <div class="items">
       <div *ngFor="let item of DESIGN_PAGE_CONTENT.items" class="item row d-flex justify-content-between">
-        <div class="text-box col-md-9">
+        <div class="text-box col-xl-9 col-lg-8">
           <div class="text">
             <h3 class="heading-tertiary">{{ item.title }}</h3>
             <p class="paragraph">{{ item.description }}</p>
@@ -38,7 +38,7 @@
             </button>
           </div>
         </div>
-        <div class="img-box col-md-3">
+        <div class="img-box col-xl-3 col-lg-4">
           <img class="img" [src]="item.imageUrl" [alt]="item.imageDescription" />
         </div>
       </div>

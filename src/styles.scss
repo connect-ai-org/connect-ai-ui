@@ -47,3 +47,31 @@ body {
   color: $outer-space;
   margin-bottom: 26px;
 }
+@include tablet {
+  .heading-primary {
+    font-size: 58px;
+  }
+  .heading-secondary {
+    font-size: 32px;
+  }
+  .heading-tertiary {
+    font-size: 24px;
+  }
+  .paragraph {
+    font-size: 16px;
+  }
+}
+@include mobile {
+  .heading-primary {
+    font-size: 54px;
+  }
+  .heading-secondary {
+    font-size: 26px;
+  }
+  .heading-tertiary {
+    font-size: 20px;
+  }
+  .paragraph {
+    font-size: 14px;
+  }
+}
