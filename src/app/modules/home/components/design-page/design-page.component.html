@@ -1,1 +1,47 @@
-<h1>Design Page</h1>
+<div class="page-name d-flex justify-content-center aligns-items-center">
+  <h2 class="heading-secondary">{{ DESIGN_PAGE_CONTENT.pageName }}</h2>
+</div>
+<div class="page-content">
+  <div class="container">
+    <div class="navigation row d-flex justify-content-start aligns-items-center py-3">
+      <div class="p-0">
+        <a routerLink="/" fragment="services" >
+          <button mat-flat-button color="primary" class="btn-back">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            Services
+          </button>
+        </a>
+      </div>
+    </div>
+    <!-- <div class="branding row d-flex justify-content-between">
+      <div class="text-box col-md-8">
+        <h3 class="heading-tertiary">{{ DESIGN_PAGE_CONTENT.branding.title }}</h3>
+        <p class="paragraph">{{ DESIGN_PAGE_CONTENT.branding.description }}</p>
+        <button mat-flat-button color="primary" class="btn-back">
+          {{ DESIGN_PAGE_CONTENT.branding.action }}
+        </button>
+      </div>
+      <div class="img-box col-md-3">
+        <img class="img" [src]="DESIGN_PAGE_CONTENT.branding.imageUrl" [alt]="DESIGN_PAGE_CONTENT.branding.imageDescription" />
+      </div>
+    </div> -->
+    <div class="items">
+      <div *ngFor="let item of DESIGN_PAGE_CONTENT.items" class="item row d-flex justify-content-between">
+        <div class="text-box col-md-9">
+          <div class="text">
+            <h3 class="heading-tertiary">{{ item.title }}</h3>
+            <p class="paragraph">{{ item.description }}</p>
+          </div>
+          <div class="action">
+            <button *ngIf="item.action" mat-flat-button color="primary" class="btn-back">
+              {{ item.action }}
+            </button>
+          </div>
+        </div>
+        <div class="img-box col-md-3">
+          <img class="img" [src]="item.imageUrl" [alt]="item.imageDescription" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DESIGN_PAGE_CONTENT } from './../../constants/design-page-content.constant';
 
 @Component({
   selector: 'app-design-page',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class DesignPageComponent implements OnInit {
+  DESIGN_PAGE_CONTENT = DESIGN_PAGE_CONTENT;
+
   constructor() { }
 
   ngOnInit() { }

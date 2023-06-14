@@ -1,0 +1,68 @@
+@import "colors";
+
+.page-name {
+  background-color: $linen;
+  height: 80px;
+  margin-top: 80px;
+
+  h2.heading-secondary {
+    margin: auto;
+  }
+}
+
+.page-content {
+  padding-bottom: 160px;
+
+  .items {
+    margin-top: 0px;
+
+    .item {
+      padding: 0 !important;
+      margin-bottom: 48px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.075);
+      border-radius: 10px;
+      overflow: hidden;
+
+      .text-box {
+        padding: 32px 48px 24px;
+
+        .heading-tertiary {
+          position: relative;
+          font-size: 32px;
+          margin-bottom: 48px;
+          // color: $pale-dogwood-shade-30;
+        }
+
+        .heading-tertiary::after {
+          position: absolute;
+          bottom: -24px;
+          left: 0;
+          right: 0;
+          content: '';
+          width: 80px;
+          height: 2px;
+          background: $pale-dogwood;
+          margin-left: 0;
+          visibility: visible;
+        }
+      }
+
+      .action {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.img-box {
+  padding: 0;
+  overflow: hidden;
+  .img {
+    width: 100%;
+    transition: all 0.4s;
+  }
+
+  .img:hover {
+    transform: scale(1.1);
+  }
+}

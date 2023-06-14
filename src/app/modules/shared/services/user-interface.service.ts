@@ -14,4 +14,8 @@ export class UserInterfaceService {
   scrollToElement(element: any): void {
     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 }
