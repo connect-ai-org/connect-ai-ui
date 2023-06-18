@@ -2,7 +2,7 @@
 @import "mixins";
 
 .page-name {
-  background-color: $linen;
+  background-color: $primary;
   height: 80px;
   margin-top: 80px;
 
@@ -31,7 +31,7 @@
           position: relative;
           font-size: 32px;
           margin-bottom: 48px;
-          // color: $pale-dogwood-shade-30;
+          color: $black;
         }
 
         .heading-tertiary::after {
@@ -42,7 +42,7 @@
           content: '';
           width: 80px;
           height: 2px;
-          background: $pale-dogwood;
+          background: $primary;
           margin-left: 0;
           visibility: visible;
         }
@@ -50,6 +50,18 @@
 
       .action {
         margin-top: 28px;
+
+        .btn-back {
+          transition: all 0.3s;
+          .btn-back-icon {
+            margin-left: 4px;
+            font-size: 20px;
+          }
+
+          &:hover {
+            background-color: $primary;
+          }
+        }
       }
     }
   }

@@ -16,7 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: $outer-space;
+  color: $gray;
   font-size: 14px;
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
@@ -28,12 +28,14 @@ body {
   font-weight: 800;
   letter-spacing: 0.5px;
   line-height: 1.05;
+  color: $black;
 }
 .heading-secondary {
   font-size: 36px;
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.05;
+  color: $black;
 }
 .heading-tertiary {
   font-size: 28px;
@@ -46,6 +48,9 @@ body {
   line-height: 26px;
   color: $outer-space;
   margin-bottom: 26px;
+}
+.error {
+  color: red;
 }
 @include tablet {
   .heading-primary {

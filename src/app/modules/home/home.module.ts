@@ -7,12 +7,14 @@ import { TypingAnimatorModule } from 'angular-typing-animator';
 import { HomeComponent } from "./home.component";
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
 import { DesignPageComponent } from "./components/design-page/design-page.component";
+import { ContactPageComponent } from './components/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     LandingPageComponent,
-    DesignPageComponent
+    DesignPageComponent,
+    ContactPageComponent
   ],
   imports: [
     RouterModule,

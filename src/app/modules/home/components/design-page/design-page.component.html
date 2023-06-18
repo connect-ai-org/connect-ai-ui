@@ -6,25 +6,13 @@
     <div class="navigation row d-flex justify-content-start aligns-items-center py-3">
       <div class="p-0">
         <a routerLink="/" fragment="services" >
-          <button mat-flat-button color="primary" class="btn-back">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+          <button mat-stroked-button color="primary" class="btn-back icon-button">
+            <ion-icon name="arrow-back-outline" style="margin-right: 4px;"></ion-icon>
             Services
           </button>
         </a>
       </div>
     </div>
-    <!-- <div class="branding row d-flex justify-content-between">
-      <div class="text-box col-md-8">
-        <h3 class="heading-tertiary">{{ DESIGN_PAGE_CONTENT.branding.title }}</h3>
-        <p class="paragraph">{{ DESIGN_PAGE_CONTENT.branding.description }}</p>
-        <button mat-flat-button color="primary" class="btn-back">
-          {{ DESIGN_PAGE_CONTENT.branding.action }}
-        </button>
-      </div>
-      <div class="img-box col-md-3">
-        <img class="img" [src]="DESIGN_PAGE_CONTENT.branding.imageUrl" [alt]="DESIGN_PAGE_CONTENT.branding.imageDescription" />
-      </div>
-    </div> -->
     <div class="items">
       <div *ngFor="let item of DESIGN_PAGE_CONTENT.items" class="item row d-flex justify-content-between">
         <div class="text-box col-xl-9 col-lg-8">
@@ -33,8 +21,15 @@
             <p class="paragraph">{{ item.description }}</p>
           </div>
           <div class="action">
-            <button *ngIf="item.action" mat-flat-button color="primary" class="btn-back">
+            <button 
+              *ngIf="item.action" 
+              mat-flat-button 
+              color="primary" 
+              class="btn-back icon-button"
+              (click)="item.onActionClicked()"
+            >
               {{ item.action }}
+              <ion-icon name="arrow-forward-outline" class="btn-back-icon"></ion-icon>
             </button>
           </div>
         </div>

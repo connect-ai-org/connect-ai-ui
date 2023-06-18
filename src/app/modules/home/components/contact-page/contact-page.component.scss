@@ -1,0 +1,131 @@
+@import "colors";
+@import "mixins";
+
+.contact-page {
+  min-height: 100vh;
+  margin-bottom: 120px;
+}
+
+.page-name {
+  position: relative;
+  background-color: $primary;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  padding: 32px 0;
+  height: 500px;
+
+  @include tablet {
+    margin-bottom: 600px;
+  }
+  
+  h2.heading-secondary {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 48px;
+  }
+}
+
+.items {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+
+  .item-wrapper {
+    padding: 0 24px;
+  }
+
+  .item {
+    background-color: $white;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.075);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 450px;
+    padding: 32px;
+
+    .title {
+      text-align: center;
+      position: relative;
+
+      .icon {
+        font-size: 64px;
+        color: $primary;
+        margin-bottom: 8px;
+      }
+
+      .heading-tertiary {
+        margin-bottom: 48px;
+      }
+
+      .heading-tertiary::after {
+        position: absolute;
+        bottom: -24px;
+        left: 0;
+        right: 0;
+        content: '';
+        width: 100px;
+        height: 2px;
+        background: $primary;
+        margin: 0 auto;
+      }
+    }
+
+    .paragraph {
+      color: $gray-tint-40;
+    }
+  }
+
+  .action {
+    button {
+      width: 200px;
+      padding: 4px;
+      font-size: 18px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $primary;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.forms {
+  padding: 24px;
+
+  .form {
+    .heading-tertiary {
+      position: relative;
+      margin-bottom: 64px;
+    }
+
+    .help {
+      font-size: 12px;
+      font-weight: 400;
+      font-style: italic;
+      color: $gray-tint-40;
+    }
+
+    .heading-tertiary::after {
+      position: absolute;
+      bottom: -32px;
+      left: 0;
+      right: 0;
+      content: '';
+      width: 100px;
+      height: 2px;
+      background: $primary;
+      margin: 0;
+    }
+
+    @include mobile {
+      button.btn-submit {
+        width: 100%;
+      }
+    }
+  }
+}

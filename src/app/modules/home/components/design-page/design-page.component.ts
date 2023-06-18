@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DESIGN_PAGE_CONTENT } from './../../constants/design-page-content.constant';
 
 @Component({
@@ -8,9 +9,11 @@ import { DESIGN_PAGE_CONTENT } from './../../constants/design-page-content.const
 })
 
 export class DesignPageComponent implements OnInit {
-  DESIGN_PAGE_CONTENT = DESIGN_PAGE_CONTENT;
+  DESIGN_PAGE_CONTENT;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.DESIGN_PAGE_CONTENT = DESIGN_PAGE_CONTENT(router);
+  }
 
   ngOnInit() { }
 }

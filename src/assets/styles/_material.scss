@@ -3,37 +3,60 @@
 
 // MAT FORM FIELD
 mat-form-field {
-  font-size: 14px;
+  font-size: 16px;
 }
 .mat-form-field-appearance-outline .mat-form-field-infix {
   padding: 8px 0 10px;
 }
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-  color: $pale-dogwood;
+  color: $black;
 }
 .mat-form-field-appearance-outline .mat-form-field-outline-start, 
 .mat-form-field-appearance-outline .mat-form-field-outline-gap,
 .mat-form-field-appearance-outline .mat-form-field-outline-end {
   border-width: 1px !important;
 }
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-start, 
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-gap,
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-end {
+  border-width: 2px !important;
+}
 .mat-form-field-label-wrapper {
   top: -16px;
 }
+.mat-form-field-label-wrapper label {
+  font-size: 14px;
+}
 .mat-form-field.mat-focused .mat-form-field-label {
-  color: $pale-dogwood;
+  color: $black;
 }
 
 // BUTTON
+.icon-button .mat-button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .mat-flat-button.mat-primary, 
 .mat-raised-button.mat-primary, 
 .mat-fab.mat-primary, 
 .mat-mini-fab.mat-primary {
-  background-color: $pale-dogwood-shade-30;
+  background-color: $black;
   min-width: 100px;
 }
+
 .mat-flat-button.mat-primary:not(:disabled):hover, 
 .mat-raised-button.mat-primary:not(:disabled):hover, 
 .mat-fab.mat-primary:not(:disabled):hover, 
 .mat-mini-fab.mat-primary:not(:disabled):hover {
-  background-color: $pale-dogwood;
+  background-color: $gray-tint-20;
+}
+
+.mat-stroked-button.mat-primary {
+  color: $black;
+  border-color: $black;
+  border-width: 2px;
+}
+.mat-stroked-button.mat-primary:not(:disabled):hover {
+  background-color: $gray-tint-90;
 }

@@ -26,7 +26,7 @@ const SERVICES = [
 ];
 
 export const LANDING_PAGE_CONTENT = {
-  websiteName: 'Connect AI',
+  websiteName: 'CONNECT AI',
   slogan: 'Innovate, Inspire, Influence',
   services: SERVICES,
 }
