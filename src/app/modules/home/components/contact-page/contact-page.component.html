@@ -30,6 +30,7 @@
       <p class="help">"<span class="error">*</span>" indicates required field</p>
       <form 
         [formGroup]="newClientEnquiryForm" 
+        #ngNewClientEnquiryForm="ngForm"
         (ngSubmit)="onSubmit(CONTACT_FORM.NEW_CLIENT_ENQUIRY)" 
         id="new-client-enquiry-form" 
         class="contact-form row"

@@ -8,8 +8,12 @@ import { HomeComponent } from "./home.component";
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
 import { DesignPageComponent } from "./components/design-page/design-page.component";
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { ContactsService } from "./services/contacts.service";
 
 @NgModule({
+  providers: [
+    ContactsService
+  ],
   declarations: [
     HomeComponent,
     LandingPageComponent,
