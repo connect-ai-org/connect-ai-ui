@@ -3,6 +3,6 @@ export const getServer = () => {
     case 'development':
       return 'https://connect-ai-dev-06c138239541.herokuapp.com/api/v1';
     default:
-      return 'http://localhost:300/api/v1';
+      return 'https://connect-ai-dev-06c138239541.herokuapp.com/api/v1';
   }
 }
