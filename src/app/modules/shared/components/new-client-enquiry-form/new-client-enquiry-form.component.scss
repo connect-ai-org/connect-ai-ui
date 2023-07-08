@@ -1,0 +1,35 @@
+@import "colors";
+@import "mixins";
+
+.form {
+  .heading-tertiary {
+    position: relative;
+    margin-bottom: 64px;
+    color: $primary;
+  }
+
+  .help {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    color: $gray-tint-40;
+  }
+
+  .heading-tertiary::after {
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background: $gradient;
+    margin: 0;
+  }
+
+  @include mobile {
+    button.btn-submit {
+      width: 100%;
+    }
+  }
+}

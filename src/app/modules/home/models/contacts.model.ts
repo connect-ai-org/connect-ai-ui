@@ -1,6 +1,15 @@
 export interface NewClientEnquiry {
   businessName: string,
-  email: string,
   firstName: string,
   lastName: string,
+  jobTitle?: string,
+  isBusinessOwner?: boolean,
+  phone: string,
+  email: string,
+  website?: string,
+  industry: string,
+  hasMarketingPlan?: boolean,
+  description: string,
+  knownBy: string,
+  hasAlreadyWorkedWithMarketingAgency?: boolean,
 }

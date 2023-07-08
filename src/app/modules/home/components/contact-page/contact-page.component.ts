@@ -88,27 +88,27 @@ export class ContactPageComponent implements OnInit {
   }
 
   submitNewClientEnquiryForm(): void {
-    if (this.newClientEnquiryForm.invalid) {
-      return;
-    }
-    const formValue = this.newClientEnquiryForm.getRawValue()
-    const data: NewClientEnquiry = {
-      businessName: formValue.businessName || '',
-      email: formValue.email || '',
-      firstName: formValue.firstName || '',
-      lastName: formValue.lastName || '',
-    };
-    this.contactsService
-      .createNewClientEnquiry(data)
-      .subscribe((res: any) => {
-        if (res.status === HTTP_STATUSES.CREATED) {
-          this.uiService.showAlert('Send data successfully!')
-          this.newClientEnquiryForm.reset();
-          this.ngNewClientEnquiryForm.resetForm();
-        } else {
-          this.uiService.showAlert('Failed');
-        }
-      });
+    // if (this.newClientEnquiryForm.invalid) {
+    //   return;
+    // }
+    // const formValue = this.newClientEnquiryForm.getRawValue()
+    // const data: NewClientEnquiry = {
+    //   businessName: formValue.businessName || '',
+    //   email: formValue.email || '',
+    //   firstName: formValue.firstName || '',
+    //   lastName: formValue.lastName || '',
+    // };
+    // this.contactsService
+    //   .createNewClientEnquiry(data)
+    //   .subscribe((res: any) => {
+    //     if (res.status === HTTP_STATUSES.CREATED) {
+    //       this.uiService.showAlert('Send data successfully!')
+    //       this.newClientEnquiryForm.reset();
+    //       this.ngNewClientEnquiryForm.resetForm();
+    //     } else {
+    //       this.uiService.showAlert('Failed');
+    //     }
+    //   });
   }
 
   submitContactForm(): void {

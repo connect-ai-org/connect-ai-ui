@@ -31,6 +31,21 @@ mat-form-field {
   color: $primary;
 }
 
+// RADIO BUTTON
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  border-color: $primary; 
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+  color: $primary;
+  background-color: $primary;
+}
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color: $primary !important;
+}
+
 // BUTTON
 .icon-button .mat-button-wrapper {
   display: flex;
