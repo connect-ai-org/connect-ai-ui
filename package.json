@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "NODE_ENV=development serve",
-    "start:dev": "NODE_ENV=development ng serve",
+    "start": "ng serve",
+    "start:dev": "ng serve --configuration=development",
+    "start:prod": "ng serve --configuration=production",
     "build": "ng build",
+    "build:dev": "ng build --configuration=development",
+    "build:prod": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
