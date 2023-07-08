@@ -3,10 +3,6 @@ import { CONTACT_PAGE_CONTENT, CONTACT_FORM } from './../../constants/contact-pa
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { UserInterfaceService } from 'src/app/modules/shared/services/user-interface.service';
 import { getErrorMessage } from 'src/app/modules/shared/helpers/form.helper';
-import { ContactsService } from '../../services/contacts.service';
-import { NewClientEnquiry } from '../../models/contacts.model';
-import { HTTP_STATUSES } from 'src/app/modules/shared/constants/http.constant';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact-page',
@@ -39,8 +35,6 @@ export class ContactPageComponent implements OnInit {
 
   constructor(
     private uiService: UserInterfaceService,
-    private contactsService: ContactsService,
-    private _snackBar: MatSnackBar
   ) {
     this.CONTACT_PAGE_CONTENT = CONTACT_PAGE_CONTENT(this);
   }
@@ -75,46 +69,7 @@ export class ContactPageComponent implements OnInit {
   }
 
   onSubmit(type: number): void {
-    switch(type) {
-      case CONTACT_FORM.NEW_CLIENT_ENQUIRY:
-        this.submitNewClientEnquiryForm();
-        break;
-      case CONTACT_FORM.CONTACT:
-        this.submitContactForm();
-        break;
-      default:
-        break;
-    }
-  }
 
-  submitNewClientEnquiryForm(): void {
-    // if (this.newClientEnquiryForm.invalid) {
-    //   return;
-    // }
-    // const formValue = this.newClientEnquiryForm.getRawValue()
-    // const data: NewClientEnquiry = {
-    //   businessName: formValue.businessName || '',
-    //   email: formValue.email || '',
-    //   firstName: formValue.firstName || '',
-    //   lastName: formValue.lastName || '',
-    // };
-    // this.contactsService
-    //   .createNewClientEnquiry(data)
-    //   .subscribe((res: any) => {
-    //     if (res.status === HTTP_STATUSES.CREATED) {
-    //       this.uiService.showAlert('Send data successfully!')
-    //       this.newClientEnquiryForm.reset();
-    //       this.ngNewClientEnquiryForm.resetForm();
-    //     } else {
-    //       this.uiService.showAlert('Failed');
-    //     }
-    //   });
-  }
-
-  submitContactForm(): void {
-    if (this.contactForm.invalid) {
-      return;
-    }
   }
 
 }
