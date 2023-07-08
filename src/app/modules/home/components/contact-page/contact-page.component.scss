@@ -3,7 +3,7 @@
 
 .contact-page {
   min-height: 100vh;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 }
 
 .page-name {
@@ -15,7 +15,7 @@
   height: 500px;
 
   @include tablet {
-    margin-bottom: 600px;
+    margin-bottom: 1150px;
   }
   
   h2.heading-secondary {
@@ -26,6 +26,10 @@
     background: $gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 }
 
@@ -40,6 +44,11 @@
     padding: 0 24px;
     margin-bottom: 48px;
     z-index: 1;
+
+    @include tablet {
+      width: 100%;
+      padding: 0;
+    }
   }
 
   .item {

@@ -16,7 +16,7 @@
                 {{ item.description }}
               </div>
             </div>
-            <div class="action d-flex justify-content-center">
+            <div class="action d-flex justify-content-center mt-2">
               <button mat-flat-button color="primary" (click)="item.onActionClicked()">
                 {{ item.actionName }}
               </button>
@@ -27,7 +27,7 @@
     </div>
   </div>
   <div class="container forms">
-    <app-new-client-enquiry-form *ngIf="true || isShowNewClientEnquiryForm"></app-new-client-enquiry-form>
+    <app-new-client-enquiry-form *ngIf="isShowNewClientEnquiryForm"></app-new-client-enquiry-form>
     <div class="form" *ngIf="isShowContactForm">
       <h3 class="heading-tertiary">Contact Us</h3>
       <p class="help">"<span class="error">*</span>" indicates required field</p>

@@ -1,11 +1,10 @@
-    <div class="form">
+    <div class="form" id="new-client-enquiry-form" >
       <h3 class="heading-tertiary">New Client Enquiry</h3>
       <p class="help">"<span class="error">*</span>" indicates required field</p>
       <form 
         [formGroup]="form" 
         #ngForm="ngForm"
         (ngSubmit)="onSubmit()" 
-        id="new-client-enquiry-form" 
         class="contact-form row"
       >
         <div class="col-md-12 mb-2">
@@ -36,7 +35,7 @@
             <mat-error *ngIf="form.get('jobTitle')?.hasError">{{ getErrorMessage('jobTitle') }}</mat-error>
           </mat-form-field>
         </div>
-        <div class="col-md-6 d-flex flex-column mb-2">
+        <div class="col-md-6 d-flex flex-column pb-3 mb-2">
           <label class="radio-group-label mb-2">Are you the business owner?</label>
           <mat-radio-group formControlName="isBusinessOwner" aria-label="Select an option">
             <mat-radio-button [value]="true">Yes</mat-radio-button>
@@ -74,7 +73,7 @@
             <mat-error *ngIf="form.get('industry')?.hasError">{{ getErrorMessage('industry') }}</mat-error>
           </mat-form-field>
         </div>
-        <div class="col-md-6 d-flex flex-column mb-2">
+        <div class="col-md-6 d-flex flex-column pb-3 mb-2">
           <label class="radio-group-label mb-2">Do you have a current marketing plan?</label>
           <mat-radio-group formControlName="hasMarketingPlan" aria-label="Select an option">
             <mat-radio-button [value]="true">Yes</mat-radio-button>
@@ -96,7 +95,7 @@
             <mat-error *ngIf="form.get('knownBy')?.hasError">{{ getErrorMessage('knownBy') }}</mat-error>
           </mat-form-field>
         </div>
-        <div class="col-md-6 d-flex flex-column mb-2">
+        <div class="col-md-6 d-flex flex-column pb-3 mb-2">
           <label class="radio-group-label mb-2">Have you worked with a marketing agency before?</label>
           <mat-radio-group formControlName="hasAlreadyWorkedWithMarketingAgency" aria-label="Select an option">
             <mat-radio-button [value]="true">Yes</mat-radio-button>
