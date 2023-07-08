@@ -8,11 +8,15 @@
 
   h2.heading-secondary {
     margin: auto;
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
 .page-content {
-  padding-bottom: 160px;
+  padding-bottom: 100px;
 
   .items {
     margin-top: 0px;
@@ -31,7 +35,7 @@
           position: relative;
           font-size: 32px;
           margin-bottom: 48px;
-          color: $black;
+          color: $primary;
         }
 
         .heading-tertiary::after {
@@ -42,7 +46,7 @@
           content: '';
           width: 80px;
           height: 2px;
-          background: $primary;
+          background: $gradient;
           margin-left: 0;
           visibility: visible;
         }

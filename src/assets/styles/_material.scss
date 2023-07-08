@@ -9,7 +9,7 @@ mat-form-field {
   padding: 8px 0 10px;
 }
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-  color: $black;
+  color: $primary;
 }
 .mat-form-field-appearance-outline .mat-form-field-outline-start, 
 .mat-form-field-appearance-outline .mat-form-field-outline-gap,
@@ -28,7 +28,7 @@ mat-form-field {
   font-size: 14px;
 }
 .mat-form-field.mat-focused .mat-form-field-label {
-  color: $black;
+  color: $primary;
 }
 
 // BUTTON
@@ -41,7 +41,7 @@ mat-form-field {
 .mat-raised-button.mat-primary, 
 .mat-fab.mat-primary, 
 .mat-mini-fab.mat-primary {
-  background-color: $black;
+  background-color: $primary;
   min-width: 100px;
 }
 
@@ -49,14 +49,14 @@ mat-form-field {
 .mat-raised-button.mat-primary:not(:disabled):hover, 
 .mat-fab.mat-primary:not(:disabled):hover, 
 .mat-mini-fab.mat-primary:not(:disabled):hover {
-  background-color: $gray-tint-20;
+  background-color: $primary-shade-20;
 }
 
 .mat-stroked-button.mat-primary {
-  color: $black;
-  border-color: $black;
+  color: $primary;
+  border-color: $primary;
   border-width: 2px;
 }
 .mat-stroked-button.mat-primary:not(:disabled):hover {
-  background-color: $gray-tint-90;
+  background-color: $primary-tint-80;
 }

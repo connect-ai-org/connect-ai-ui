@@ -4,6 +4,7 @@
 .section-title {
   margin-bottom: 60px;
   position: relative;
+  color: $primary;
 }
 
 .section-title::after {
@@ -14,7 +15,7 @@
   content: '';
   width: 100px;
   height: 2px;
-  background: $primary;
+  background: $gradient;
   margin: 0 auto;
 }
 
@@ -25,6 +26,13 @@
   .hero {
     padding: 120px 0 120px;
 
+    .heading-primary {
+      background: $gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     .heading-secondary {
       font-weight: 500;
       color: $white;
@@ -34,7 +42,7 @@
 
 .section-services {
   .services {
-    padding: 120px 0 160px;
+    padding: 80px 0 100px;
 
     .service {
       padding: 0 24px;
@@ -73,6 +81,7 @@
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 48px;
+            color: $primary;
             position: relative;
           }
 
@@ -84,7 +93,7 @@
             content: '';
             width: 40px;
             height: 1px;
-            background: $primary;
+            background: $gradient;
             margin-left: 0;
             visibility: visible;
           }
@@ -157,11 +166,41 @@
 }
 
 .section-contact {
-  padding: 120px 0 160px;
+  padding: 120px 0 120px;
 
-  .contact-form {
-    padding-top: 20px;
-    width: 600px;
+  .heading-secondary {
+    font-size: 32px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: $primary;
+  }
+
+  .contact-left {
+    padding-right: 32px;
+
+    .heading-primary {
+      background: $gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .contact-right {
+    text-align: right;
+
+    p {
+      font-size: 32px;
+      line-height: 44px;
+      color: $primary;
+    }
+
+    button {
+      font-size: 28px;
+      font-weight: bold;
+      padding: 12px 32px;
+    }
   }
 }
 
@@ -184,11 +223,5 @@
 
   .section-contact {
     padding: 60px 0;
-
-    .contact-form {
-      .btn-submit {
-        width: 100%;
-      }
-    }
   }
 }

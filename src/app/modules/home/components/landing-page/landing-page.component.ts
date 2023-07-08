@@ -1,7 +1,6 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LANDING_PAGE_CONTENT } from '../../constants/landing-page-content.constant';
-import { ActivatedRoute } from '@angular/router';
-import { UserInterfaceService } from 'src/app/modules/shared/services/user-interface.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,8 +11,11 @@ import { UserInterfaceService } from 'src/app/modules/shared/services/user-inter
 export class LandingPageComponent implements OnInit {
   LANDING_PAGE_CONTENT = LANDING_PAGE_CONTENT;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {}
 
+  onClickContactUs(): void {
+    this.router.navigate(['contact']);
+  }
 }

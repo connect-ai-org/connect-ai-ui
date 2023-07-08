@@ -1,9 +1,11 @@
 <div class="contact-page">
   <div class="page-name">
-    <h2 class="heading-secondary">{{ 'CONTACT US' }}</h2>
+    <div class="heading d-flex align-items-center justify-content-center">
+      <h2 class="heading-secondary">CONTACT US</h2>
+    </div>
     <div class="items container">
-      <div class="row">
-        <div *ngFor="let item of CONTACT_PAGE_CONTENT.items" class="item-wrapper col-lg-6 mb-3">
+      <div class="d-flex flex-wrap justify-content-center">
+        <div *ngFor="let item of CONTACT_PAGE_CONTENT.items" class="item-wrapper">
           <div class="item d-flex flex-column justify-content-between">
             <div class="content">
               <div class="title">

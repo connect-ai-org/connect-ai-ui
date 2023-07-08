@@ -22,7 +22,17 @@ export const CONTACT_PAGE_CONTENT = (cmp: ContactPageComponent) => ({
       onActionClicked: () => {
         cmp.onContactUsClicked();
       }
-    }
+    },
+    {
+      id: 3,
+      icon: 'pricetag-outline',
+      title: 'Submit a Support Ticket',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam temporibus impedit at dignissimos eos mollitia, dolor magni minus eligendi voluptas nisi ipsa necessitatibus quam fugiat consectetur vitae obcaecati assumenda.',
+      actionName: 'Submit Ticket',
+      onActionClicked: () => {
+        cmp.onContactUsClicked();
+      }
+    },
   ]
 });
 
