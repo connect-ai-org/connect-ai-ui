@@ -1,0 +1,93 @@
+@import "colors";
+@import "mixins";
+
+.footer {
+  
+  .line {
+    height: 2px;
+    background: $gradient;
+  }
+
+  .logo {
+    height: 22px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    padding: 80px 0;
+
+    .logo-col {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .footer-logo {
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      padding-left: 0;
+    }
+
+    .footer-heading {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: $primary;
+    }
+    
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-link:link,
+    .footer-link:visited {
+      text-decoration: none;
+      font-size: 14px;
+      color: $gray-tint-40;
+      transition: all 0.3s;
+    }
+    
+    .footer-link:hover,
+    .footer-link:active {
+      color: $gray;
+    }
+
+    .social-links {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+
+    .social-icon {
+      height: 32px;
+      width: 32px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 32px 24px;
+
+      .nav-col {
+        grid-row: 1;
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    background-color: $primary;
+    padding: 16px 0;
+
+    .paragraph {
+      color: white;
+      margin: 0;
+    }
+  }
+}

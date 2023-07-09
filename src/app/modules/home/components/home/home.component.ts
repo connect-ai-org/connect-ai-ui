@@ -1,5 +1,5 @@
 import { ActivatedRoute, Event, NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { UserInterfaceService } from './../shared/services/user-interface.service';
+import { UserInterfaceService } from '../../../shared/services/user-interface.service';
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -9,7 +9,6 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   isHomePage = false;
-  isOpenMenu = false;
  
   constructor(
     private router: Router,
@@ -27,13 +26,11 @@ export class HomeComponent implements OnInit {
     });
 
     this.route.fragment.subscribe((fragment: string | null) => {
-      setTimeout(() => {
-        if (fragment) {
-          this.uiService.scrollToId(fragment);
-        } else {
-          this.uiService.scrollToTop();
-        }
-      }, 200);
+      if (!fragment) {
+        this.uiService.scrollToTop();
+      } else {
+        this.uiService.scrollToId(fragment);
+      }
     });
   }
 
@@ -44,10 +41,6 @@ export class HomeComponent implements OnInit {
       url = url.slice(0, hashIndex);
     }
     this.isHomePage = url === '/';
-  }
-
-  onToggleMenu(): void {
-    this.isOpenMenu = !this.isOpenMenu;
   }
 
 }

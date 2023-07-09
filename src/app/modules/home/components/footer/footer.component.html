@@ -1,0 +1,56 @@
+<footer class="footer">
+  <div class="line"></div>
+  <div class="container">
+    <div class="logo-col">
+      <a [href]="FOOTER_CONTENT.logo.link" class="footer-logo">
+        <img class="logo" [alt]="FOOTER_CONTENT.logo.description" [src]="FOOTER_CONTENT.logo.imageUrl" />
+      </a>
+      <ul class="social-links">
+        <li *ngFor="let item of FOOTER_CONTENT.socials">
+          <a class="footer-link" [href]="item.url" target="_blank">
+            <ion-icon class="social-icon" [name]="item.icon"></ion-icon
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="address-col">
+      <p class="footer-heading">{{ FOOTER_CONTENT.contact.heading }}</p>
+      <address class="contacts">
+        <p class="address">
+          {{ FOOTER_CONTENT.contact.address }}
+        </p>
+        <p class="paragraph">
+          <a class="footer-link" [href]="'tel:' + FOOTER_CONTENT.contact.phone">
+            {{ FOOTER_CONTENT.contact.phone }}
+          </a>
+          <br />
+          <a class="footer-link" [href]="'mailto:' + FOOTER_CONTENT.contact.email">
+            {{ FOOTER_CONTENT.contact.email }}
+          </a>
+        </p>
+      </address>
+    </div>
+
+    <nav class="nav-col">
+      <p class="footer-heading">{{ FOOTER_CONTENT.quickLinks.heading }}</p>
+      <ul class="footer-nav">
+        <li *ngFor="let item of FOOTER_CONTENT.quickLinks.items">
+          <a class="footer-link" [href]="item.link">{{ item.label }}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="nav-col">
+      <p class="footer-heading">{{ FOOTER_CONTENT.services.heading }}</p>
+      <ul class="footer-nav">
+        <li *ngFor="let item of FOOTER_CONTENT.services.items">
+          <a class="footer-link" [href]="item.link">{{ item.label }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="copyright">
+    <p class="paragraph">{{ FOOTER_CONTENT.copyright }}</p>
+  </div>
+</footer>

@@ -4,11 +4,16 @@ import { SharedModule } from "../shared/shared.module";
 import { HomeRoutingModule } from "./home-routing.module";
 import { TypingAnimatorModule } from 'angular-typing-animator';
 
-import { HomeComponent } from "./home.component";
+import { ContactsService } from "./services/contacts.service";
+
+import { HomeComponent } from "./components/home/home.component";
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
 import { DesignPageComponent } from "./components/design-page/design-page.component";
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
-import { ContactsService } from "./services/contacts.service";
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MarketingPageComponent } from './components/marketing-page/marketing-page.component';
+import { DigitalPageComponent } from './components/digital-page/digital-page.component';
 
 @NgModule({
   providers: [
@@ -16,9 +21,13 @@ import { ContactsService } from "./services/contacts.service";
   ],
   declarations: [
     HomeComponent,
+    HeaderComponent,
+    FooterComponent,
     LandingPageComponent,
     DesignPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    MarketingPageComponent,
+    DigitalPageComponent
   ],
   imports: [
     RouterModule,

@@ -50,6 +50,8 @@ mat-form-field {
 .icon-button .mat-button-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 .mat-flat-button.mat-primary, 
