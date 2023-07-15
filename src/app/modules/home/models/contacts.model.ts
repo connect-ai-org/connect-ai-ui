@@ -1,4 +1,4 @@
-export interface NewClientEnquiry {
+export interface INewClientEnquiry {
   businessName: string,
   firstName: string,
   lastName: string,
@@ -12,4 +12,13 @@ export interface NewClientEnquiry {
   description: string,
   knownBy: string,
   hasAlreadyWorkedWithMarketingAgency?: boolean,
+}
+
+export interface IContact {
+  firstName: string,
+  lastName: string,
+  phone: string,
+  email: string,
+  website?: string,
+  message: string,
 }

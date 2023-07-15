@@ -1,4 +1,4 @@
-import { NewClientEnquiry } from './../models/contacts.model';
+import { IContact, INewClientEnquiry } from './../models/contacts.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 import { Observable, Subject } from 'rxjs';
@@ -11,9 +11,19 @@ export class ContactsService {
 
   constructor(private http: HttpClient) {}
 
-  createNewClientEnquiry(data: NewClientEnquiry): Observable<any> {
+  createNewClientEnquiry(data: INewClientEnquiry): Observable<any> {
     return this.http.post<any>(
       `${this.apiURL}/newClientEnquiries`,
+      data, 
+      {
+        observe: 'response'
+      }
+    );
+  }
+
+  createContact(data: IContact): Observable<any> {
+    return this.http.post<any>(
+      `${this.apiURL}/contacts`,
       data, 
       {
         observe: 'response'

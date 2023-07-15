@@ -1,8 +1,8 @@
 import { INDUSTRY_OPTIONS } from './../../constants/form.constant';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { getErrorMessage } from '../../helpers/form.helper';
-import { NewClientEnquiry } from 'src/app/modules/home/models/contacts.model';
+import { getErrorMessageOfFormControlName } from '../../helpers/form.helper';
+import { INewClientEnquiry } from 'src/app/modules/home/models/contacts.model';
 import { ContactsService } from 'src/app/modules/home/services/contacts.service';
 import { HTTP_STATUSES } from '../../constants/http.constant';
 import { UserInterfaceService } from '../../services/user-interface.service';
@@ -43,11 +43,7 @@ export class NewClientEnquiryFormComponent implements OnInit {
   }
 
   getErrorMessage(formControlName: string): string {
-    const control: FormControl = this.form.get(formControlName) as FormControl;
-    if (control) {
-      return getErrorMessage(control);
-    }
-    return '';
+    return getErrorMessageOfFormControlName(this.form, formControlName);
   }
 
   onSubmit(): void {
@@ -56,7 +52,7 @@ export class NewClientEnquiryFormComponent implements OnInit {
     }
 
     const formValue = this.form.getRawValue();
-    const data: NewClientEnquiry = {
+    const data: INewClientEnquiry = {
       businessName: formValue.businessName || '',
       firstName: formValue.firstName || '',
       lastName: formValue.lastName || '',
@@ -74,13 +70,17 @@ export class NewClientEnquiryFormComponent implements OnInit {
     
     this.contactsService
       .createNewClientEnquiry(data)
-      .subscribe((res: any) => {
-        if (res.status === HTTP_STATUSES.CREATED) {
-          this.uiService.showAlert('Send data successfully!')
-          this.form.reset();
-          this.ngForm.resetForm();
-        } else {
-          this.uiService.showAlert('Failed');
+      .subscribe({
+        next: (v) => { 
+          if (v.status === HTTP_STATUSES.CREATED) {
+            this.uiService.showAlert('Send data successfully!')
+            this.form.reset();
+            this.ngForm.resetForm();
+          }
+        },
+        error: (e) => {
+          console.log(e)
+          this.uiService.showAlert(e.message);
         }
       });
   }

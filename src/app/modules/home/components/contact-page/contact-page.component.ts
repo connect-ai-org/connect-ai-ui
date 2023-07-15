@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CONTACT_PAGE_CONTENT, CONTACT_FORM } from './../../constants/contact-page-content.constant';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { UserInterfaceService } from 'src/app/modules/shared/services/user-interface.service';
-import { getErrorMessage } from 'src/app/modules/shared/helpers/form.helper';
 
 @Component({
   selector: 'app-contact-page',
@@ -58,18 +57,6 @@ export class ContactPageComponent implements OnInit {
     setTimeout(() => {
       this.uiService.scrollToId('contact-form');
     }, 200);
-  }
-
-  getErrorMessage(formGroup: FormGroup, formControlName: string): string {
-    const control: FormControl = formGroup.get(formControlName) as FormControl;
-    if (control) {
-      return getErrorMessage(control);
-    }
-    return '';
-  }
-
-  onSubmit(type: number): void {
-
   }
 
 }

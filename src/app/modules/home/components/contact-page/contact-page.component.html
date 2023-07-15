@@ -28,47 +28,6 @@
   </div>
   <div class="container forms">
     <app-new-client-enquiry-form *ngIf="isShowNewClientEnquiryForm"></app-new-client-enquiry-form>
-    <div class="form" *ngIf="isShowContactForm">
-      <h3 class="heading-tertiary">Contact Us</h3>
-      <p class="help">"<span class="error">*</span>" indicates required field</p>
-      <form 
-        [formGroup]="contactForm" 
-        (ngSubmit)="onSubmit(CONTACT_FORM.CONTACT)" 
-        id="contact-form" 
-        class="contact-form row"
-      >
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>First Name</mat-label>
-            <input matInput formControlName="firstName" placeholder="Enter your first name" required >
-            <mat-error *ngIf="contactForm.get('firstName')?.hasError">{{ getErrorMessage(contactForm, 'firstName') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Last Name</mat-label>
-            <input matInput formControlName="lastName" placeholder="Enter your last name" required >
-            <mat-error *ngIf="contactForm.get('lastName')?.hasError">{{ getErrorMessage(contactForm, 'lastName') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Email Address</mat-label>
-            <input matInput formControlName="email" placeholder="Enter your email" required >
-            <mat-error *ngIf="contactForm.get('email')?.hasError">{{ getErrorMessage(contactForm, 'email') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Phone</mat-label>
-            <input matInput formControlName="phone" placeholder="Enter your phone" required >
-            <mat-error *ngIf="contactForm.get('phone')?.hasError">{{ getErrorMessage(contactForm, 'phone') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-12 d-flex justify-content-end">
-          <button mat-flat-button type="submit" class="btn-submit" color="primary">Submit</button>
-        </div>
-      </form>
-    </div>
+    <app-contact-form *ngIf="isShowContactForm"></app-contact-form>
   </div>
 </div>
