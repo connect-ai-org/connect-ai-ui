@@ -30,13 +30,8 @@ export const CONTACT_PAGE_CONTENT = (cmp: ContactPageComponent) => ({
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam temporibus impedit at dignissimos eos mollitia, dolor magni minus eligendi voluptas nisi ipsa necessitatibus quam fugiat consectetur vitae obcaecati assumenda.',
       actionName: 'Submit Ticket',
       onActionClicked: () => {
-        cmp.onContactUsClicked();
+        cmp.onSubmitTicketClicked();
       }
     },
   ]
 });
-
-export enum CONTACT_FORM {
-  NEW_CLIENT_ENQUIRY,
-  CONTACT,
-}

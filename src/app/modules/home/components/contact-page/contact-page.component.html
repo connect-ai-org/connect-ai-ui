@@ -27,7 +27,8 @@
     </div>
   </div>
   <div class="container forms">
-    <app-new-client-enquiry-form *ngIf="isShowNewClientEnquiryForm"></app-new-client-enquiry-form>
-    <app-contact-form *ngIf="isShowContactForm"></app-contact-form>
+    <app-new-client-enquiry-form *ngIf="displayOptions.isShowNewClientEnquiryForm"></app-new-client-enquiry-form>
+    <app-contact-form *ngIf="displayOptions.isShowContactForm"></app-contact-form>
+    <app-support-ticket-form *ngIf="displayOptions.isShowSupportTicketForm"></app-support-ticket-form>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { IContact, INewClientEnquiry } from './../models/contacts.model';
+import { IContact, INewClientEnquiry, ISupportTicket } from './../models/contacts.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 import { Observable, Subject } from 'rxjs';
@@ -24,6 +24,16 @@ export class ContactsService {
   createContact(data: IContact): Observable<any> {
     return this.http.post<any>(
       `${this.apiURL}/contacts`,
+      data, 
+      {
+        observe: 'response'
+      }
+    );
+  }
+
+  createSupportTickets(data: ISupportTicket): Observable<any> {
+    return this.http.post<any>(
+      `${this.apiURL}/supportTickets`,
       data, 
       {
         observe: 'response'

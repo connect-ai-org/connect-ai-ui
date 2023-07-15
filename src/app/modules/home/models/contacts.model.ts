@@ -1,3 +1,5 @@
+import { IFile } from "../../shared/models/file.model";
+
 export interface INewClientEnquiry {
   businessName: string,
   firstName: string,
@@ -21,4 +23,13 @@ export interface IContact {
   email: string,
   website?: string,
   message: string,
+}
+
+export interface ISupportTicket {
+  firstName: string,
+  lastName: string,
+  phone: string,
+  email: string,
+  ticket: string,
+  attachments?: IFile[]
 }

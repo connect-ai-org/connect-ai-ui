@@ -1,8 +1,12 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { CONTACT_PAGE_CONTENT, CONTACT_FORM } from './../../constants/contact-page-content.constant';
-import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { CONTACT_PAGE_CONTENT } from './../../constants/contact-page-content.constant';
 import { UserInterfaceService } from 'src/app/modules/shared/services/user-interface.service';
 
+interface IDisplayOption {
+  isShowNewClientEnquiryForm: boolean,
+  isShowContactForm: boolean,
+  isShowSupportTicketForm: boolean,
+}
 @Component({
   selector: 'app-contact-page',
   templateUrl: './contact-page.component.html',
@@ -10,27 +14,12 @@ import { UserInterfaceService } from 'src/app/modules/shared/services/user-inter
 })
 export class ContactPageComponent implements OnInit {
   CONTACT_PAGE_CONTENT;
-  CONTACT_FORM = CONTACT_FORM;
 
-  @ViewChild('ngNewClientEnquiryForm')
-  ngNewClientEnquiryForm!: NgForm;
-
-  isShowNewClientEnquiryForm: boolean = false;
-  isShowContactForm: boolean = false;
-
-  newClientEnquiryForm = new FormGroup({
-    businessName: new FormControl('', [Validators.required]),
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
-  });
-
-  contactForm = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    phone: new FormControl('', [Validators.required])
-  });
+  displayOptions: IDisplayOption = {
+    isShowNewClientEnquiryForm: false,
+    isShowContactForm: false,
+    isShowSupportTicketForm: false,
+  }
 
   constructor(
     private uiService: UserInterfaceService,
@@ -41,21 +30,43 @@ export class ContactPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onEnquireNowClicked(): void {
-    this.isShowContactForm = false;
-    this.isShowNewClientEnquiryForm = true;
+  showForm(name: 'new-enquiry' | 'contact' | 'support-ticket' | null | undefined ): void {
+    for (const key in this.displayOptions) {
+      this.displayOptions[key as keyof IDisplayOption] = false;
+    }
+    switch (name) {
+      case 'new-enquiry':
+        this.displayOptions.isShowNewClientEnquiryForm = true;
+        break;
+      case 'contact':
+        this.displayOptions.isShowContactForm = true;
+        break;
+      case 'support-ticket':
+        this.displayOptions.isShowSupportTicketForm = true;
+        break;
+      default:
+        break;
+    }
+  } 
 
+  onEnquireNowClicked(): void {
+    this.showForm('new-enquiry');
     setTimeout(() => {
       this.uiService.scrollToId('new-client-enquiry-form');
     }, 200);
   }
 
   onContactUsClicked(): void {
-    this.isShowContactForm = true;
-    this.isShowNewClientEnquiryForm = false;
-
+    this.showForm('contact');
     setTimeout(() => {
       this.uiService.scrollToId('contact-form');
+    }, 200);
+  }
+
+  onSubmitTicketClicked(): void {
+    this.showForm('support-ticket');
+    setTimeout(() => {
+      this.uiService.scrollToId('support-ticket-form');
     }, 200);
   }
 
