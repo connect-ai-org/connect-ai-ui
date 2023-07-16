@@ -35,3 +35,15 @@ export const CONTACT_PAGE_CONTENT = (cmp: ContactPageComponent) => ({
     },
   ]
 });
+
+export enum CONTACT_FORM_IDS {
+  NEW_CLIENT_ENQUIRY = 'new-client-enquiry-form',
+  CONTACT = 'contact-form',
+  SUPPORT_TICKET = 'support-ticket-form',
+};
+
+export enum CONTACT_FORM_TYPES {
+  NEW_CLIENT_ENQUIRY = 'new-enquiry',
+  CONTACT = 'contact',
+  SUPPORT_TICKET = 'support-ticket',
+}

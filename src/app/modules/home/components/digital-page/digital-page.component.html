@@ -1,1 +1,26 @@
-<p>digital-page works!</p>
+<div class="page-name d-flex justify-content-center aligns-items-center">
+  <h2 class="heading-secondary">{{ DIGITAL_PAGE_CONTENT.pageName }}</h2>
+</div>
+<div class="page-content">
+  <div class="container">
+    <div class="items">
+      <div *ngFor="let item of DIGITAL_PAGE_CONTENT.items" class="item row d-flex justify-content-between">
+        <div class="text-box col-lg-8">
+          <div class="text">
+            <h3 class="heading-tertiary">{{ item.title }}</h3>
+            <p class="paragraph">{{ item.description }}</p>
+          </div>
+          <div class="d-inline-block action" (click)="item.onActionClicked()">
+            <div class="d-flex align-items-center">
+              <span>{{ item.action }}</span>
+              <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="img-box col-lg-4">
+          <img class="img" [src]="item.imageUrl" [alt]="item.imageDescription" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

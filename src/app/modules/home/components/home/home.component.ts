@@ -9,7 +9,8 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   isHomePage = false;
- 
+  isContactPage = false;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -17,11 +18,13 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.checkIsHomePage(this.router.url);
+    this.checkPage(this.router.url);
 
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
-        this.checkIsHomePage(event.url)
+
+        this.checkPage(event.url);
+
       }
     });
 
@@ -34,13 +37,18 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  checkIsHomePage(pageUrl: string): void {
+  checkPage(pageUrl: string): void {
     let url = pageUrl;
     const hashIndex = pageUrl.indexOf('#');
     if (hashIndex !== -1) {
       url = url.slice(0, hashIndex);
     }
     this.isHomePage = url === '/';
+    this.isContactPage = url === '/contact';
+
+    if (this.isContactPage) {
+      this.uiService.scrollToTop();
+    }
   }
 
 }

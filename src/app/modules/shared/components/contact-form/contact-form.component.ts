@@ -1,3 +1,4 @@
+import { CONTACT_FORM_IDS } from './../../../home/constants/contact-page-content.constant';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { UserInterfaceService } from '../../services/user-interface.service';
@@ -23,6 +24,8 @@ export class ContactFormComponent implements OnInit {
     company: new FormControl('', []),
     message: new FormControl('', Validators.required),
   });
+
+  CONTACT_FORM_IDS = CONTACT_FORM_IDS;
   
   constructor(
     private contactsService: ContactsService,

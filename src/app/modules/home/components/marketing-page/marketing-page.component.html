@@ -14,9 +14,11 @@
               <h3 class="heading-tertiary">{{ item.title }}</h3>
               <p class="paragraph">{{ item.description }}</p>
             </div>
-            <div class="action d-flex align-items-center">
-              <a [href]="item.navigateUrl">{{ item.action }}</a>
-              <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
+            <div class="d-inline-block" (click)="item.onActionClicked()">
+              <div class="action d-flex align-items-center">
+                <span>{{ item.action }}</span>
+                <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
+              </div>
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { DIGITAL_PAGE_CONTENT } from './../../constants/digital-page-content.constant';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./digital-page.component.scss']
 })
 export class DigitalPageComponent implements OnInit {
+  DIGITAL_PAGE_CONTENT;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.DIGITAL_PAGE_CONTENT = DIGITAL_PAGE_CONTENT(router);
+  }
 
   ngOnInit(): void {
   }

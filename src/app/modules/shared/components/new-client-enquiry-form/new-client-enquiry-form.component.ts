@@ -6,6 +6,7 @@ import { INewClientEnquiry } from 'src/app/modules/home/models/contacts.model';
 import { ContactsService } from 'src/app/modules/home/services/contacts.service';
 import { HTTP_STATUSES } from '../../constants/http.constant';
 import { UserInterfaceService } from '../../services/user-interface.service';
+import { CONTACT_FORM_IDS } from 'src/app/modules/home/constants/contact-page-content.constant';
 
 @Component({
   selector: 'app-new-client-enquiry-form',
@@ -33,6 +34,7 @@ export class NewClientEnquiryFormComponent implements OnInit {
   });
 
   INDUSTRY_OPTIONS = INDUSTRY_OPTIONS;
+  CONTACT_FORM_IDS = CONTACT_FORM_IDS;
 
   constructor(
     private contactsService: ContactsService,

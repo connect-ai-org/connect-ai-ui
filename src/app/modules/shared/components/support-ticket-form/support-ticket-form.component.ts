@@ -5,6 +5,7 @@ import { UserInterfaceService } from '../../services/user-interface.service';
 import { getErrorMessageOfFormControlName } from '../../helpers/form.helper';
 import { ISupportTicket } from 'src/app/modules/home/models/contacts.model';
 import { HTTP_STATUSES } from '../../constants/http.constant';
+import { CONTACT_FORM_IDS } from 'src/app/modules/home/constants/contact-page-content.constant';
 
 @Component({
   selector: 'app-support-ticket-form',
@@ -23,6 +24,8 @@ export class SupportTicketFormComponent implements OnInit {
     ticket: new FormControl('', Validators.required),
     attachments: new FormControl([], []),
   });
+
+  CONTACT_FORM_IDS = CONTACT_FORM_IDS;
 
   constructor(
     private contactsService: ContactsService,

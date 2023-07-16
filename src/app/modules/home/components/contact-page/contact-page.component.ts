@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CONTACT_PAGE_CONTENT } from './../../constants/contact-page-content.constant';
+import { CONTACT_FORM_IDS, CONTACT_FORM_TYPES, CONTACT_PAGE_CONTENT } from './../../constants/contact-page-content.constant';
 import { UserInterfaceService } from 'src/app/modules/shared/services/user-interface.service';
 
 interface IDisplayOption {
@@ -30,18 +30,18 @@ export class ContactPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showForm(name: 'new-enquiry' | 'contact' | 'support-ticket' | null | undefined ): void {
+  showForm(name: CONTACT_FORM_TYPES | null | undefined ): void {
     for (const key in this.displayOptions) {
       this.displayOptions[key as keyof IDisplayOption] = false;
     }
     switch (name) {
-      case 'new-enquiry':
+      case CONTACT_FORM_TYPES.NEW_CLIENT_ENQUIRY:
         this.displayOptions.isShowNewClientEnquiryForm = true;
         break;
-      case 'contact':
+      case CONTACT_FORM_TYPES.CONTACT:
         this.displayOptions.isShowContactForm = true;
         break;
-      case 'support-ticket':
+      case CONTACT_FORM_TYPES.SUPPORT_TICKET:
         this.displayOptions.isShowSupportTicketForm = true;
         break;
       default:
@@ -50,23 +50,23 @@ export class ContactPageComponent implements OnInit {
   } 
 
   onEnquireNowClicked(): void {
-    this.showForm('new-enquiry');
+    this.showForm(CONTACT_FORM_TYPES.NEW_CLIENT_ENQUIRY);
     setTimeout(() => {
-      this.uiService.scrollToId('new-client-enquiry-form');
+      this.uiService.scrollToId(CONTACT_FORM_IDS.NEW_CLIENT_ENQUIRY, -100);
     }, 200);
   }
 
   onContactUsClicked(): void {
-    this.showForm('contact');
+    this.showForm(CONTACT_FORM_TYPES.CONTACT);
     setTimeout(() => {
-      this.uiService.scrollToId('contact-form');
+      this.uiService.scrollToId(CONTACT_FORM_IDS.CONTACT, -100);
     }, 200);
   }
 
   onSubmitTicketClicked(): void {
-    this.showForm('support-ticket');
+    this.showForm(CONTACT_FORM_TYPES.SUPPORT_TICKET);
     setTimeout(() => {
-      this.uiService.scrollToId('support-ticket-form');
+      this.uiService.scrollToId(CONTACT_FORM_IDS.SUPPORT_TICKET, -100);
     }, 200);
   }
 

@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { isNullOrUndefined } from "../helpers/common.helper";
 
 @Injectable({ providedIn: 'root' })
 export class UserInterfaceService {
@@ -7,19 +8,24 @@ export class UserInterfaceService {
     private _snackBar: MatSnackBar
   ) {}
 
-  scrollToId(id: string): void {
+  scrollToId(id: string, offsetY?: number): void {
     const element = document.getElementById(id);
     if (element) {
-      this.scrollToElement(element);
+      this.scrollToElement(element, offsetY);
     }
   }
 
-  scrollToElement(element: any): void {
-    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  scrollToElement(element: HTMLElement, offsetY?: number): void {
+    if (!isNullOrUndefined(offsetY)) {
+      const rect = element.getBoundingClientRect();
+      this.scrollToTop(rect.top + (offsetY as number));
+    } else {
+      element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    }
   }
 
-  scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  scrollToTop(top?: number): void {
+    window.scrollTo({ top: top ? top : 0, behavior: "smooth" });
   }
 
   showAlert(message: string, action?: string, config?: any): void {
