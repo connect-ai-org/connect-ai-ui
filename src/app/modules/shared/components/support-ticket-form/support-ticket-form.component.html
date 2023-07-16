@@ -2,6 +2,7 @@
   <h3 class="heading-tertiary">Support Ticket</h3>
   <p class="help">"<span class="error">*</span>" indicates required field</p>
   <form 
+    #ngForm="ngForm"
     [formGroup]="form" 
     (ngSubmit)="onSubmit()" 
     class="contact-form row"
