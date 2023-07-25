@@ -8,6 +8,24 @@ export class UserInterfaceService {
     private _snackBar: MatSnackBar
   ) {}
 
+  getCoords(element: HTMLElement) {
+    var box = element.getBoundingClientRect();
+
+    var body = document.body;
+    var docEl = document.documentElement;
+
+    var scrollTop = window.scrollY || docEl.scrollTop || body.scrollTop;
+    var scrollLeft = window.scrollX || docEl.scrollLeft || body.scrollLeft;
+
+    var clientTop = docEl.clientTop || body.clientTop || 0;
+    var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+    var top  = box.top +  scrollTop - clientTop;
+    var left = box.left + scrollLeft - clientLeft;
+
+    return { top: Math.round(top), left: Math.round(left) };
+}
+
   scrollToId(id: string, offsetY?: number): void {
     const element = document.getElementById(id);
     if (element) {
@@ -17,8 +35,8 @@ export class UserInterfaceService {
 
   scrollToElement(element: HTMLElement, offsetY?: number): void {
     if (!isNullOrUndefined(offsetY)) {
-      const rect = element.getBoundingClientRect();
-      this.scrollToTop(rect.top + (offsetY as number));
+      const { top } = this.getCoords(element);
+      this.scrollToTop(top + (offsetY as number));
     } else {
       element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     }

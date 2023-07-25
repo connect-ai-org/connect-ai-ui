@@ -2,7 +2,7 @@ import { HeaderComponent } from "../components/header/header.component";
 
 export const HEADER_CONTENT = (cpm: HeaderComponent) => ({
   logo: {
-    imageUrl: 'assets/images/omnifood-logo.png',
+    imageUrl: 'assets/images/connect-ai-logo-1.png',
     description: 'Connect AI logo',
     link: '/#',
   },
@@ -40,7 +40,7 @@ export const HEADER_CONTENT = (cpm: HeaderComponent) => ({
 
 export const FOOTER_CONTENT = {
   logo: {
-    imageUrl: 'assets/images/omnifood-logo.png',
+    imageUrl: 'assets/images/connect-ai-logo-2.png',
     description: 'Connect AI logo',
     link: '/#',
   },

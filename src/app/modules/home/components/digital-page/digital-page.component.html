@@ -10,12 +10,24 @@
             <h3 class="heading-tertiary">{{ item.title }}</h3>
             <p class="paragraph">{{ item.description }}</p>
           </div>
-          <div class="d-inline-block action" (click)="item.onActionClicked()">
+          <div class="action">
+            <button 
+              *ngIf="item.action" 
+              mat-flat-button 
+              color="primary" 
+              class="btn-back icon-button"
+              (click)="item.onActionClicked()"
+            >
+              {{ item.action }}
+              <ion-icon name="arrow-forward-outline" class="btn-back-icon"></ion-icon>
+            </button>
+          </div>
+          <!-- <div class="d-inline-block action" (click)="item.onActionClicked()">
             <div class="d-flex align-items-center">
               <span>{{ item.action }}</span>
               <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="img-box col-lg-4">
           <img class="img" [src]="item.imageUrl" [alt]="item.imageDescription" />

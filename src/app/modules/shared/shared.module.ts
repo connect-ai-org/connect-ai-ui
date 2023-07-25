@@ -7,6 +7,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ContactFormComponent } from "./components/contact-form/contact-form.component";
 import { NewClientEnquiryFormComponent } from "./components/new-client-enquiry-form/new-client-enquiry-form.component";
 import { SupportTicketFormComponent } from "./components/support-ticket-form/support-ticket-form.component";
+import { FilesDragDropComponent } from "./components/files-drag-drop/files-drag-drop.component";
 
 const modules = [
   CommonModule,
@@ -20,6 +21,7 @@ const components = [
   ContactFormComponent,
   NewClientEnquiryFormComponent,
   SupportTicketFormComponent,
+  FilesDragDropComponent,
 ];
 @NgModule({
   declarations: [

@@ -38,27 +38,21 @@
 </section>
 <!-- ABOUT US -->
 <section id="about" class="section-about">
-  <div class="container about">
-    <h2 class="section-title heading-secondary text-center">About Us</h2>
-    <p class="paragraph text-center mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum non fugit qui at architecto odio id vero commodi tempore sint! In obcaecati commodi consequuntur accusamus ut quas quo quos voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsa, delectus debitis consequatur a et officia eius alias incidunt voluptatum sit ut odio nostrum autem maxime reiciendis esse iure praesentium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatem illo atque commodi accusantium dolorum qui totam, eos culpa fugit doloribus quas veritatis unde tenetur mollitia ea temporibus. Voluptates, quibusdam.</p>
+  <div class="container about row d-flex align-items-center justify-content-between">
+    <div class="col-lg-6">
+      <div class="img-container">
+        <img [src]="LANDING_PAGE_CONTENT.about.imageUrl" [alt]="LANDING_PAGE_CONTENT.about.imageDescription" />
+      </div>
+    </div>
+    <div class="col-lg-6 txt-container">
+      <h2 class="section-title heading-secondary text-center">About Us</h2>
+      <p class="paragraph text-center mb-5">{{ LANDING_PAGE_CONTENT.about.description }}</p>
+    </div>
   </div>
 </section>
 <!-- CONTACT -->
 <section id="contact" class="section-contact">
-  <div class="container container-contact">
-    <h2 class="heading-secondary">CONTACT US</h2>
-    <div class="contact d-flex justify-content-between align-items-center">
-      <div class="contact-left">
-        <p class="heading-primary">Get in touch with us now.</p>
-      </div>
-      <div class="contact-right">
-        <a href="/contact">
-          <button class="icon-button" mat-flat-button color="primary">
-            Contact Us
-            <ion-icon name="arrow-forward-outline" class="btn-back-icon"></ion-icon>
-          </button>
-        </a>
-      </div>
-    </div>
+  <div class="container-contact">
+    <app-contacts></app-contacts>
   </div>
 </section>

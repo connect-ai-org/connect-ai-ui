@@ -2,6 +2,7 @@
 @import "mixins";
 
 .footer {
+  background-color: $primary;
   
   .line {
     height: 2px;
@@ -9,13 +10,17 @@
   }
 
   .logo {
-    height: 22px;
+    height: 56px;
+
+    @include small-tablet {
+      height: 40px;
+    }
   }
   
   .container {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
-    padding: 80px 0;
+    padding: 64px 0 32px;
 
     .logo-col {
       display: flex;
@@ -35,7 +40,7 @@
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 24px;
-      color: $primary;
+      color: $gray-tint-80;
     }
     
     .footer-nav {
@@ -49,13 +54,13 @@
     .footer-link:visited {
       text-decoration: none;
       font-size: 14px;
-      color: $gray-tint-40;
+      color: $white;
       transition: all 0.3s;
     }
     
     .footer-link:hover,
     .footer-link:active {
-      color: $gray;
+      color: $gray-tint-80;
     }
 
     .social-links {
@@ -67,6 +72,10 @@
     .social-icon {
       height: 32px;
       width: 32px;
+    }
+
+    .contacts p.address {
+      color: $gray-tint-80;
     }
 
     @include small-tablet {

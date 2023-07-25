@@ -25,8 +25,15 @@ const SERVICES = [
   },
 ];
 
+const ABOUT = {
+  imageUrl: 'assets/images/about.jpg',
+  imageDescription: 'About Us',
+  description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum non fugit qui at architecto odio id vero commodi tempore sint! In obcaecati commodi consequuntur accusamus ut quas quo quos voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsa, delectus debitis consequatur a et officia eius alias incidunt voluptatum sit ut odio nostrum autem maxime reiciendis esse iure praesentium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatem illo atque commodi accusantium dolorum qui totam, eos culpa fugit doloribus quas veritatis unde tenetur mollitia ea temporibus. Voluptates, quibusdam.',
+}
+
 export const LANDING_PAGE_CONTENT = {
   websiteName: 'CONNECT AI',
   slogan: 'Innovate, Inspire, Influence',
   services: SERVICES,
+  about: ABOUT,
 }

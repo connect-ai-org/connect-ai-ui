@@ -1,0 +1,29 @@
+<div
+  class="drop-file-input"
+  [ngClass]="{ 'dragover': isDragOver }"
+  (dragenter)="onDragEnter()"
+  (dragleave)="onDragLeave()"
+  (drop)="onDrop()"
+>
+  <div class="drop-file-input__label">
+    <img src="assets/images/cloud-upload-regular-240.png" alt="Upload">
+    <p>Drag & Drop your files here</p>
+  </div>
+  <input type="file" value="" (change)="onFileDrop($event)" />
+</div>
+<div 
+  *ngIf="files.length > 0"
+  class="drop-file-preview"
+>
+  <p class="drop-file-preview__title">
+    Ready to upload
+  </p>
+  <div *ngFor="let file of files" class="drop-file-preview__item">
+    <img [src]="getImageConfig(file.type.split('/')[1])" alt="" />
+    <div class="drop-file-preview__item__info">
+      <p>{{ file.name }}</p>
+      <p>{{ file.size }}B</p>
+    </div>
+    <span class="drop-file-preview__item__del" (click)="onFileRemove(file)">x</span>
+  </div>
+</div>

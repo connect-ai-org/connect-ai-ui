@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MarketingPageComponent } from './components/marketing-page/marketing-page.component';
 import { DigitalPageComponent } from './components/digital-page/digital-page.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   providers: [
@@ -27,7 +28,8 @@ import { DigitalPageComponent } from './components/digital-page/digital-page.com
     DesignPageComponent,
     ContactPageComponent,
     MarketingPageComponent,
-    DigitalPageComponent
+    DigitalPageComponent,
+    ContactsComponent
   ],
   imports: [
     RouterModule,

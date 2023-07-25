@@ -1,109 +1,109 @@
-    <div class="form" [id]="CONTACT_FORM_IDS.NEW_CLIENT_ENQUIRY" >
-      <h3 class="heading-tertiary">New Client Enquiry</h3>
-      <p class="help">"<span class="error">*</span>" indicates required field</p>
-      <form 
-        [formGroup]="form" 
-        #ngForm="ngForm"
-        (ngSubmit)="onSubmit()" 
-        class="contact-form row"
-      >
-        <div class="col-md-12 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Business Name</mat-label>
-            <input matInput formControlName="businessName" placeholder="Enter your business name" required >
-            <mat-error *ngIf="form.get('businessName')?.hasError">{{ getErrorMessage('businessName') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>First Name</mat-label>
-            <input matInput formControlName="firstName" placeholder="Enter your first name" required >
-            <mat-error *ngIf="form.get('firstName')?.hasError">{{ getErrorMessage('firstName') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Last Name</mat-label>
-            <input matInput formControlName="lastName" placeholder="Enter your last name" required >
-            <mat-error *ngIf="form.get('lastName')?.hasError">{{ getErrorMessage('lastName') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Job Title / Position / Role in the business</mat-label>
-            <input matInput formControlName="jobTitle" placeholder="Enter your job title">
-            <mat-error *ngIf="form.get('jobTitle')?.hasError">{{ getErrorMessage('jobTitle') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 d-flex flex-column pb-3 mb-2">
-          <label class="radio-group-label mb-2">Are you the business owner?</label>
-          <mat-radio-group formControlName="isBusinessOwner" aria-label="Select an option">
-            <mat-radio-button [value]="true">Yes</mat-radio-button>
-            <mat-radio-button [value]="false">No</mat-radio-button>
-          </mat-radio-group>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Phone</mat-label>
-            <input matInput formControlName="phone" placeholder="Enter your phone" required >
-            <mat-error *ngIf="form.get('phone')?.hasError">{{ getErrorMessage('phone') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Email Address</mat-label>
-            <input matInput formControlName="email" placeholder="Enter your email" required >
-            <mat-error *ngIf="form.get('email')?.hasError">{{ getErrorMessage('email') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-12 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Website</mat-label>
-            <input matInput formControlName="website" placeholder="Enter your website" >
-            <mat-error *ngIf="form.get('website')?.hasError">{{ getErrorMessage('website') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Industry</mat-label>
-            <mat-select matNativeControl formControlName="industry" required >
-              <mat-option>Select</mat-option>
-              <mat-option *ngFor="let option of INDUSTRY_OPTIONS" [value]="option">{{ option }}</mat-option>
-            </mat-select>
-            <mat-error *ngIf="form.get('industry')?.hasError">{{ getErrorMessage('industry') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 d-flex flex-column pb-3 mb-2">
-          <label class="radio-group-label mb-2">Do you have a current marketing plan?</label>
-          <mat-radio-group formControlName="hasMarketingPlan" aria-label="Select an option">
-            <mat-radio-button [value]="true">Yes</mat-radio-button>
-            <mat-radio-button [value]="false">No</mat-radio-button>
-          </mat-radio-group>
-        </div>
-        <div class="col-md-12 mb-2">
-          <p class="help">Do you have any particular timings/upcoming deadlines? What marketing activities are you currently doing? Is there any additional comments or information we need to know?</p>
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>What marketing help do you need?</mat-label>
-            <textarea matInput formControlName="description" placeholder="What other marketing help do you need?" rows="5" required ></textarea>
-            <mat-error *ngIf="form.get('description')?.hasError">{{ getErrorMessage('description') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 mb-2">
-          <mat-form-field class="w-100" appearance="outline">
-            <mat-label>How did you hear about us?</mat-label>
-            <input matInput formControlName="knownBy" placeholder="How did you hear about us?" required >
-            <mat-error *ngIf="form.get('knownBy')?.hasError">{{ getErrorMessage('knownBy') }}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-md-6 d-flex flex-column pb-3 mb-2">
-          <label class="radio-group-label mb-2">Have you worked with a marketing agency before?</label>
-          <mat-radio-group formControlName="hasAlreadyWorkedWithMarketingAgency" aria-label="Select an option">
-            <mat-radio-button [value]="true">Yes</mat-radio-button>
-            <mat-radio-button [value]="false">No</mat-radio-button>
-          </mat-radio-group>
-        </div>
-        <div class="col-md-12 d-flex justify-content-end">
-          <button mat-flat-button type="submit" class="btn-submit" color="primary">Submit</button>
-        </div>
-      </form>
+<div class="form" [id]="CONTACT_FORM_IDS.NEW_CLIENT_ENQUIRY" >
+  <h3 class="heading-tertiary">New Client Enquiry</h3>
+  <p class="help">"<span class="error">*</span>" indicates required field</p>
+  <form 
+    [formGroup]="form" 
+    #ngForm="ngForm"
+    (ngSubmit)="onSubmit()" 
+    class="contact-form row"
+  >
+    <div class="col-md-12 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Business Name</mat-label>
+        <input matInput formControlName="businessName" placeholder="Enter your business name" required >
+        <mat-error *ngIf="form.get('businessName')?.hasError">{{ getErrorMessage('businessName') }}</mat-error>
+      </mat-form-field>
     </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" placeholder="Enter your first name" required >
+        <mat-error *ngIf="form.get('firstName')?.hasError">{{ getErrorMessage('firstName') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" placeholder="Enter your last name" required >
+        <mat-error *ngIf="form.get('lastName')?.hasError">{{ getErrorMessage('lastName') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Job Title / Position / Role in the business</mat-label>
+        <input matInput formControlName="jobTitle" placeholder="Enter your job title">
+        <mat-error *ngIf="form.get('jobTitle')?.hasError">{{ getErrorMessage('jobTitle') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 d-flex flex-column pb-3 mb-2">
+      <label class="radio-group-label mb-2">Are you the business owner?</label>
+      <mat-radio-group formControlName="isBusinessOwner" aria-label="Select an option">
+        <mat-radio-button [value]="true">Yes</mat-radio-button>
+        <mat-radio-button [value]="false">No</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" placeholder="Enter your phone" required >
+        <mat-error *ngIf="form.get('phone')?.hasError">{{ getErrorMessage('phone') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Email Address</mat-label>
+        <input matInput formControlName="email" placeholder="Enter your email" required >
+        <mat-error *ngIf="form.get('email')?.hasError">{{ getErrorMessage('email') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-12 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Website</mat-label>
+        <input matInput formControlName="website" placeholder="Enter your website" >
+        <mat-error *ngIf="form.get('website')?.hasError">{{ getErrorMessage('website') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Industry</mat-label>
+        <mat-select matNativeControl formControlName="industry" required >
+          <mat-option>Select</mat-option>
+          <mat-option *ngFor="let option of INDUSTRY_OPTIONS" [value]="option">{{ option }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('industry')?.hasError">{{ getErrorMessage('industry') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 d-flex flex-column pb-3 mb-2">
+      <label class="radio-group-label mb-2">Do you have a current marketing plan?</label>
+      <mat-radio-group formControlName="hasMarketingPlan" aria-label="Select an option">
+        <mat-radio-button [value]="true">Yes</mat-radio-button>
+        <mat-radio-button [value]="false">No</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="col-md-12 mb-2">
+      <p class="help">Do you have any particular timings/upcoming deadlines? What marketing activities are you currently doing? Is there any additional comments or information we need to know?</p>
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>What marketing help do you need?</mat-label>
+        <textarea matInput formControlName="description" placeholder="What other marketing help do you need?" rows="5" required ></textarea>
+        <mat-error *ngIf="form.get('description')?.hasError">{{ getErrorMessage('description') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>How did you hear about us?</mat-label>
+        <input matInput formControlName="knownBy" placeholder="How did you hear about us?" required >
+        <mat-error *ngIf="form.get('knownBy')?.hasError">{{ getErrorMessage('knownBy') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 d-flex flex-column pb-3 mb-2">
+      <label class="radio-group-label mb-2">Have you worked with a marketing agency before?</label>
+      <mat-radio-group formControlName="hasAlreadyWorkedWithMarketingAgency" aria-label="Select an option">
+        <mat-radio-button [value]="true">Yes</mat-radio-button>
+        <mat-radio-button [value]="false">No</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="col-md-12 d-flex justify-content-end">
+      <button mat-flat-button type="submit" class="btn-submit" color="primary">Submit</button>
+    </div>
+  </form>
+</div>

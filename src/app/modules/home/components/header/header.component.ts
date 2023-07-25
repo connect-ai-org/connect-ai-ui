@@ -1,5 +1,5 @@
 import { HEADER_CONTENT } from './../../constants/header-footer-content.constant';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
