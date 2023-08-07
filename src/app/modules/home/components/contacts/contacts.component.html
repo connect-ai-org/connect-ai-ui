@@ -1,32 +1,34 @@
-<div class="page-name">
-  <div class="heading d-flex align-items-center justify-content-center">
-    <h2 class="heading-secondary">Contact Us</h2>
-  </div>
-  <div class="items container">
-    <div class="d-flex flex-wrap justify-content-center">
-      <div *ngFor="let item of CONTACT_PAGE_CONTENT.items" class="item-wrapper">
-        <div class="item d-flex flex-column justify-content-between">
-          <div class="content">
-            <div class="title">
-              <ion-icon class="icon" [name]="item.icon"></ion-icon>
-              <h3 class="heading-tertiary">{{ item.title }}</h3>
+<div [ngClass]="{'white-color': isWhiteColor }">
+  <div class="page-name">
+    <div class="heading d-flex align-items-center justify-content-center">
+      <h2 class="heading-secondary">Contact Us</h2>
+    </div>
+    <div class="items container">
+      <div class="d-flex flex-wrap justify-content-center">
+        <div *ngFor="let item of CONTACT_PAGE_CONTENT.items" class="item-wrapper">
+          <div class="item d-flex flex-column justify-content-between">
+            <div class="content">
+              <div class="title">
+                <ion-icon class="icon" [name]="item.icon"></ion-icon>
+                <h3 class="heading-tertiary">{{ item.title }}</h3>
+              </div>
+              <div class="paragraph">
+                {{ item.description }}
+              </div>
             </div>
-            <div class="paragraph">
-              {{ item.description }}
+            <div class="action d-flex justify-content-center mt-2">
+              <button mat-flat-button color="primary" (click)="item.onActionClicked()">
+                {{ item.actionName }}
+              </button>
             </div>
-          </div>
-          <div class="action d-flex justify-content-center mt-2">
-            <button mat-flat-button color="primary" (click)="item.onActionClicked()">
-              {{ item.actionName }}
-            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="container forms">
-  <app-new-client-enquiry-form *ngIf="displayOptions.isShowNewClientEnquiryForm"></app-new-client-enquiry-form>
-  <app-contact-form *ngIf="displayOptions.isShowContactForm"></app-contact-form>
-  <app-support-ticket-form *ngIf="displayOptions.isShowSupportTicketForm"></app-support-ticket-form>
+  <div class="container forms">
+    <app-new-client-enquiry-form *ngIf="displayOptions.isShowNewClientEnquiryForm"></app-new-client-enquiry-form>
+    <app-contact-form *ngIf="displayOptions.isShowContactForm"></app-contact-form>
+    <app-support-ticket-form *ngIf="displayOptions.isShowSupportTicketForm"></app-support-ticket-form>
+  </div>
 </div>

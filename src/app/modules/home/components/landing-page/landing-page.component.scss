@@ -20,12 +20,16 @@
 }
 
 .section-hero {
+  background-image: url('../../../../../assets/images/hero-1.jpg');
   background-color: $primary;
-  height: 100vh;
+  background-size: cover;
   padding-top: 80px;
 
   .hero {
-    padding: 120px 0 120px;
+    // padding: 220px 0 120px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-80%);
 
     .heading-primary {
       background: $gradient;
@@ -37,6 +41,50 @@
     .heading-secondary {
       font-weight: 500;
       color: $white;
+    }
+  }
+}
+
+.section-hero {
+  height: 100vh;
+
+  .website-name-img {
+    height: 120px;
+  }
+
+  @include small-desktop {
+    height: 75vh;
+  }
+
+  @include tablet {
+    height: 600px;
+  }
+
+  @include small-tablet {
+    height: 450px;
+
+    .website-name-img {
+      height: 80px;
+    }
+
+    .hero-text-box h2.heading-secondary span {
+      font-size: 28px;
+    }
+  }
+
+  @include mobile {
+    height: 300px;
+
+    .hero {
+      transform: translateY(-50%);
+    }
+
+    .website-name-img {
+      height: 56px;
+    }
+
+    .hero-text-box h2.heading-secondary span {
+      font-size: 18px;
     }
   }
 }
@@ -118,7 +166,7 @@
 }
 
 .section-about {
-  background-color: $black;
+  background-color: $primary;
 
   @include tablet {
     padding: 64px 16px;
@@ -188,7 +236,7 @@
 }
 
 .section-contact {
-  padding: 120px 0 0;
+  padding: 40px 0 0;
 
   .heading-secondary {
     font-size: 32px;
@@ -254,6 +302,6 @@
   }
 
   .section-contact {
-    padding: 60px 0;
+    padding: 0;
   }
 }

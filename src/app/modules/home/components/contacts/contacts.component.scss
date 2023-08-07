@@ -29,10 +29,6 @@
 }
 
 .items {
-  top: 170px;
-  left: 0;
-  right: 0;
-
   .item-wrapper {
     width: calc(100% / 3);
     padding: 0 24px;
@@ -59,6 +55,10 @@
 
     @include small-tablet {
       height: 360px;
+    }
+
+    @include mobile {
+      height: fit-content;
     }
 
     .title {
@@ -115,4 +115,19 @@
 
 .forms {
   padding: 56px 24px;
+}
+
+.white-color {
+  .page-name {
+    background-color: $white !important;
+    padding-bottom: 0;
+
+    h2.heading-secondary {
+      color: $primary !important;
+    }
+  }
+
+  .forms {
+    padding-top: 0 !important;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CONTACT_FORM_IDS, CONTACT_FORM_TYPES, CONTACT_PAGE_CONTENT } from './../../constants/contact-page-content.constant';
 import { UserInterfaceService } from 'src/app/modules/shared/services/user-interface.service';
 
@@ -14,6 +14,8 @@ interface IDisplayOption {
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
+  @Input() isWhiteColor: boolean = false;
+  
   CONTACT_PAGE_CONTENT;
 
   displayOptions: IDisplayOption = {

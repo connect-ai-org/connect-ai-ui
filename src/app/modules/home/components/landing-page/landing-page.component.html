@@ -2,9 +2,11 @@
 <section id="hero" class="section-hero">
   <div class="container hero d-flex aligns-item-center justify-content-center">
     <div class="hero-text-box text-center">
-      <h1 class="heading-primary mb-4">{{ LANDING_PAGE_CONTENT.websiteName }}</h1>
+      <!-- <h1 class="heading-primary mb-4">{{ LANDING_PAGE_CONTENT.websiteName }}</h1> -->
+      <h1 class="heading-primary mb-4">
+        <img class="website-name-img" src="assets/images/connect-ai-logo-2.png" />
+      </h1>
       <h2 class="heading-secondary">
-        &nbsp;
         <span
           typingAnimator
           [sentences]="[LANDING_PAGE_CONTENT.slogan]"
@@ -53,6 +55,6 @@
 <!-- CONTACT -->
 <section id="contact" class="section-contact">
   <div class="container-contact">
-    <app-contacts></app-contacts>
+    <app-contacts [isWhiteColor]="true"></app-contacts>
   </div>
 </section>

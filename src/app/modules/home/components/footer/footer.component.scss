@@ -19,7 +19,7 @@
   
   .container {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     padding: 64px 0 32px;
 
     .logo-col {
@@ -87,6 +87,18 @@
         margin-bottom: 32px;
       }
     }
+
+    @include mobile {
+      .footer-heading {
+        font-size: 16px;
+      }
+
+      .footer-link:link,
+      .footer-link:visited,
+      p.address {
+        font-size: 12px;
+      }
+    }
   }
 
   .copyright {
@@ -97,6 +109,10 @@
     .paragraph {
       color: white;
       margin: 0;
+
+      @include mobile {
+        font-size: 12px;
+      }
     }
   }
 }
