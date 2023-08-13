@@ -8,15 +8,15 @@
 
   h2.heading-secondary {
     margin: auto;
-    background: $gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
+    // background: $gradient;
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
 }
 
 .page-content {
-  margin-top: 32px;
   padding-bottom: 100px;
 
   .items {

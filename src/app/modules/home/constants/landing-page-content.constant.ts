@@ -2,7 +2,7 @@ const SERVICES = [
   {
     id: 1,
     name: 'Design',
-    description: 'Web design is the process of planning and organising website content for the purpose of creating a user-friendly, and functional online platform that introduces information about businesses, promotes products or services and engages visitors. From branding to web design and software engineering, Connect AI offers a wide range of design services.',
+    description: 'Design services encompass all graphics and branding such as banner advertising, logos, menus and websites to ensure a consistent and cohesive brand identity. We specialise in creating a unified brand image across a diverse range of mediums. This could involve rebranding, extending your current identity for new pieces of content, or designing and developing bespoke websites. Visit the case studies section to see some examples of our work! (add hyperlink)',
     imageUrl: 'assets/images/services/design.jpg',
     imageDescription: 'Design Service',
     routing: '/design',
@@ -10,7 +10,7 @@ const SERVICES = [
   {
     id: 2,
     name: 'Digital',
-    description: 'Digital marketing refers to the strategic use of various online channels and platforms to promote products, services, or brands and engage with target audiences. Connect AI offers services in Search Engine Optimization (SEO), Social Media Marketing, Pay-Per-Click Advertising (Google Ads) and more.',
+    description: 'Digital marketing is using various online platforms to showcase what you offer, connect with your ideal customers, and see your brand shine. Our services include Search Engine Optimisation (SEO), social media marketing, content marketing, pay-per-click advertising (Google Ads), and more. With digital marketing, you can spread your message far and wide, connect with the people who matter most, and track how well your campaigns are doing.',
     imageUrl: 'assets/images/services/digital.jpg',
     imageDescription: 'Digital Service',
     routing: '/digital',
@@ -18,7 +18,7 @@ const SERVICES = [
   {
     id: 3,
     name: 'Marketing',
-    description: 'Marketing involves the methods and plans that a business can employ to showcase their products, services, or brand to possible customers. When there\'s less competition and you have more partners, customers, and brand recognition, using marketing can help increase your sales. As more customers become aware of your business and have a favorable opinion of it, they\'re more inclined to buy from you.',
+    description: 'Marketing services provided are more medium-term engagements to rebrand your business and deliver ongoing content. This involves showcasing your products or services to potential customers across a variety of mediums. One key element is a content calendar – a plan to deliver a wide variety of content across social media and advertising platforms to bring brand awareness. Over time, this service can present your business through a modern and elegant lens creating a favourable and marketable brand image.',
     imageUrl: 'assets/images/services/marketing.jpg',
     imageDescription: 'Marketing Service',
     routing: '/marketing',
@@ -28,7 +28,7 @@ const SERVICES = [
 const ABOUT = {
   imageUrl: 'assets/images/about.jpg',
   imageDescription: 'About Us',
-  description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum non fugit qui at architecto odio id vero commodi tempore sint! In obcaecati commodi consequuntur accusamus ut quas quo quos voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsa, delectus debitis consequatur a et officia eius alias incidunt voluptatum sit ut odio nostrum autem maxime reiciendis esse iure praesentium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatem illo atque commodi accusantium dolorum qui totam, eos culpa fugit doloribus quas veritatis unde tenetur mollitia ea temporibus. Voluptates, quibusdam.',
+  description: 'Welcome to Connect AI! We are a local Canberra business specialising in building brand images that resonate. After helping numerous friends start and improve their businesses by providing graphic design, marketing material, websites, photography, videography and social media help, Connect AI was formed as most products were created by AI with human polishing. ',
 }
 
 export const LANDING_PAGE_CONTENT = {

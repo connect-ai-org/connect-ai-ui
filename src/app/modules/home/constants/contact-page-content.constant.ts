@@ -7,7 +7,7 @@ export const CONTACT_PAGE_CONTENT = (cmp: ContactsComponent) => ({
       id: 1,
       icon: 'bulb-outline',
       title: 'New Client Enquiry',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam temporibus impedit at dignissimos eos mollitia.',
+      description: 'We would love to hear from you! Leave your enquiries below, and we will get touch with you shortly.',
       actionName: 'Enquire Now',
       onActionClicked: () => {
         cmp.onEnquireNowClicked();
@@ -16,8 +16,8 @@ export const CONTACT_PAGE_CONTENT = (cmp: ContactsComponent) => ({
     {
       id: 2,
       icon: 'chatbubble-outline',
-      title: 'Contact Us',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam temporibus impedit at dignissimos eos mollitia.',
+      title: 'Contact Our Team',
+      description: 'Need answers or more details? Drop us a message, and we\'ll reply within 1-2 business days.',
       actionName: 'Contact Us',
       onActionClicked: () => {
         cmp.onContactUsClicked();
@@ -27,7 +27,7 @@ export const CONTACT_PAGE_CONTENT = (cmp: ContactsComponent) => ({
       id: 3,
       icon: 'pricetag-outline',
       title: 'Support Ticket',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam temporibus impedit at dignissimos eos mollitia.',
+      description: 'If you require any assistance, please feel free to reach out using the form below. Rest assured; we\'ll get in touch with you shortly.',
       actionName: 'Submit Ticket',
       onActionClicked: () => {
         cmp.onSubmitTicketClicked();

@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
   title: 'Dev Environment',
-  apiURL: 'https://connect-ai-dev-06c138239541.herokuapp.com/api/v1'
+  apiURL: 'https://connect-ai-server-dev.onrender.com/api/v1'
 };

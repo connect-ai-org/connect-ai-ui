@@ -47,21 +47,21 @@ export const FOOTER_CONTENT = {
   socials: [
     {
       icon: 'logo-instagram',
-      url: 'https://www.instagram.com/',
+      url: 'https://instagram.com/connect.a.i?igshid=OGQ5ZDc2ODk2ZA==',
     },    
     {
       icon: 'logo-facebook',
-      url: 'https://www.facebook.com/',
+      url: 'https://www.facebook.com/profile.php?id=61550051130743&mibextid=LQQJ4d',
     },
-    {
-      icon: 'logo-twitter',
-      url: 'https://twitter.com/',
-    },
+    // {
+    //   icon: 'logo-twitter',
+    //   url: 'https://twitter.com/',
+    // },
   ],
   contact: {
     heading: 'Contact Us',
     address: 'Harrison, ACT, 2914',
-    phone: '0414-001-427',
+    phone: '0414 001 427',
     email: 'sophie.vo@connectai.au',
   },
   quickLinks: {
