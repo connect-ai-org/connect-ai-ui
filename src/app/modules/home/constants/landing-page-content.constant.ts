@@ -2,7 +2,7 @@ const SERVICES = [
   {
     id: 1,
     name: 'Design',
-    description: 'Design services encompass all graphics and branding such as banner advertising, logos, menus and websites to ensure a consistent and cohesive brand identity. We specialise in creating a unified brand image across a diverse range of mediums. This could involve rebranding, extending your current identity for new pieces of content, or designing and developing bespoke websites. Visit the case studies section to see some examples of our work! (add hyperlink)',
+    description: 'Design services encompass all graphics and branding such as banner advertising, logos, menus and websites to ensure a consistent and cohesive brand identity. We specialise in creating a unified brand image across a diverse range of mediums. This could involve rebranding, extending your current identity for new pieces of content, or designing and developing bespoke websites. Visit the case studies section to see some examples of our work!',
     imageUrl: 'assets/images/services/design.jpg',
     imageDescription: 'Design Service',
     routing: '/design',

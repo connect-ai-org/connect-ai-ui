@@ -14,24 +14,6 @@
       </ul>
     </div>
 
-    <div class="address-col">
-      <p class="footer-heading">{{ FOOTER_CONTENT.contact.heading }}</p>
-      <address class="contacts">
-        <p class="address">
-          {{ FOOTER_CONTENT.contact.address }}
-        </p>
-        <p class="paragraph">
-          <a class="footer-link" [href]="'tel:' + FOOTER_CONTENT.contact.phone">
-            {{ FOOTER_CONTENT.contact.phone }}
-          </a>
-          <br />
-          <a class="footer-link" [href]="'mailto:' + FOOTER_CONTENT.contact.email">
-            {{ FOOTER_CONTENT.contact.email }}
-          </a>
-        </p>
-      </address>
-    </div>
-
     <nav class="nav-col">
       <p class="footer-heading">{{ FOOTER_CONTENT.quickLinks.heading }}</p>
       <ul class="footer-nav">
@@ -49,6 +31,25 @@
         </li>
       </ul>
     </nav>
+
+    <div class="address-col">
+      <p class="footer-heading">{{ FOOTER_CONTENT.contact.heading }}</p>
+      <address class="contacts">
+        <p class="address">
+          {{ FOOTER_CONTENT.contact.address }}
+        </p>
+        <p class="paragraph">
+          <a class="footer-link" [href]="'tel:' + FOOTER_CONTENT.contact.phone">
+            {{ FOOTER_CONTENT.contact.phone }}
+          </a>
+          <br />
+          <a class="footer-link" [href]="'mailto:' + FOOTER_CONTENT.contact.email">
+            {{ FOOTER_CONTENT.contact.email }}
+          </a>
+        </p>
+      </address>
+    </div>
+    
   </div>
   <div class="copyright">
     <p class="paragraph">{{ FOOTER_CONTENT.copyright }}</p>

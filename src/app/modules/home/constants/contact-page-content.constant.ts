@@ -1,7 +1,7 @@
 import { ContactsComponent } from "../components/contacts/contacts.component";
 
 export const CONTACT_PAGE_CONTENT = (cmp: ContactsComponent) => ({
-  pageName: 'CONTACT US',
+  pageName: 'CONTACT',
   items: [
     {
       id: 1,

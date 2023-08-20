@@ -1,5 +1,5 @@
 import { INDUSTRY_OPTIONS } from './../../constants/form.constant';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { getErrorMessageOfFormControlName } from '../../helpers/form.helper';
 import { INewClientEnquiry } from 'src/app/modules/home/models/contacts.model';
@@ -14,6 +14,8 @@ import { CONTACT_FORM_IDS } from 'src/app/modules/home/constants/contact-page-co
   styleUrls: ['./new-client-enquiry-form.component.scss']
 })
 export class NewClientEnquiryFormComponent implements OnInit {
+  @Output() submitted = new EventEmitter();
+
   @ViewChild('ngForm')
   ngForm!: NgForm;
   
@@ -75,9 +77,10 @@ export class NewClientEnquiryFormComponent implements OnInit {
       .subscribe({
         next: (v) => { 
           if (v.status === HTTP_STATUSES.CREATED) {
-            this.uiService.showAlert('Send data successfully!')
+            this.uiService.showAlert('Submitted Successfully')
             this.form.reset();
             this.ngForm.resetForm();
+            this.submitted.emit();
           }
         },
         error: (e) => {

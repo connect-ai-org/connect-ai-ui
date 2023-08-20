@@ -90,8 +90,11 @@
 }
 
 .section-services {
+  margin-top: -80px;
+  padding-top: 80px;
+
   .services {
-    padding: 80px 0 100px;
+    padding: 56px 0 100px;
 
     .service {
       padding: 0 24px;
@@ -167,10 +170,15 @@
 }
 
 .section-about {
-  background-color: $primary;
+  margin-top: -80px;
+  padding-top: 140px;
 
-  @include tablet {
-    padding: 64px 16px;
+  .content {
+    background-color: $primary;
+  
+    @include tablet {
+      padding: 64px 16px;
+    }
   }
 
   .heading-secondary {
@@ -237,7 +245,8 @@
 }
 
 .section-contact {
-  padding: 40px 0 0;
+  margin-top: -80px;
+  padding-top: 80px;
 
   .heading-secondary {
     font-size: 32px;

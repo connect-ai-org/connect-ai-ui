@@ -1,5 +1,5 @@
 import { CONTACT_FORM_IDS } from './../../../home/constants/contact-page-content.constant';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { UserInterfaceService } from '../../services/user-interface.service';
 import { ContactsService } from 'src/app/modules/home/services/contacts.service';
@@ -13,6 +13,7 @@ import { HTTP_STATUSES } from '../../constants/http.constant';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
+  @Output() submitted = new EventEmitter();
   @ViewChild('ngForm')
   ngForm!: NgForm;
 
@@ -58,9 +59,10 @@ export class ContactFormComponent implements OnInit {
     .subscribe({
       next: (v) => { 
         if (v.status === HTTP_STATUSES.CREATED) {
-          this.uiService.showAlert('Send data successfully!')
+          this.uiService.showAlert('Submitted Successfully')
           this.form.reset();
           this.ngForm.resetForm();
+          this.submitted.emit();
         }
       },
       error: (e) => {

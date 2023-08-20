@@ -1,7 +1,7 @@
 <div [ngClass]="{'white-color': isWhiteColor }">
   <div class="page-name">
     <div class="heading d-flex align-items-center justify-content-center">
-      <h2 class="heading-secondary">Contact Us</h2>
+      <h2 class="heading-secondary">Contact</h2>
     </div>
     <div class="items container">
       <div class="d-flex flex-wrap justify-content-center">
@@ -27,8 +27,17 @@
     </div>
   </div>
   <div class="container forms">
-    <app-new-client-enquiry-form *ngIf="displayOptions.isShowNewClientEnquiryForm"></app-new-client-enquiry-form>
-    <app-contact-form *ngIf="displayOptions.isShowContactForm"></app-contact-form>
-    <app-support-ticket-form *ngIf="displayOptions.isShowSupportTicketForm"></app-support-ticket-form>
+    <app-new-client-enquiry-form 
+      *ngIf="displayOptions.isShowNewClientEnquiryForm"
+      (submitted)="onFormSubmitted()"
+    ></app-new-client-enquiry-form>
+    <app-contact-form 
+      *ngIf="displayOptions.isShowContactForm"
+      (submitted)="onFormSubmitted()"
+    ></app-contact-form>
+    <app-support-ticket-form 
+      *ngIf="displayOptions.isShowSupportTicketForm"
+      (submitted)="onFormSubmitted()"
+    ></app-support-ticket-form>
   </div>
 </div>

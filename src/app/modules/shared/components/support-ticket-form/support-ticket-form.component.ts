@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactsService } from 'src/app/modules/home/services/contacts.service';
 import { UserInterfaceService } from '../../services/user-interface.service';
@@ -13,6 +13,8 @@ import { CONTACT_FORM_IDS } from 'src/app/modules/home/constants/contact-page-co
   styleUrls: ['./support-ticket-form.component.scss']
 })
 export class SupportTicketFormComponent implements OnInit {
+  @Output() submitted = new EventEmitter();
+
   @ViewChild('ngForm')
   ngForm!: NgForm;
 
@@ -59,9 +61,10 @@ export class SupportTicketFormComponent implements OnInit {
     .subscribe({
       next: (v) => { 
         if (v.status === HTTP_STATUSES.CREATED) {
-          this.uiService.showAlert('Send data successfully!')
+          this.uiService.showAlert('Submitted Successfully')
           this.form.reset();
           this.ngForm.resetForm();
+          this.submitted.emit();
         }
       },
       error: (e) => {

@@ -32,7 +32,7 @@ export const DESIGN_PAGE_CONTENT = (router: Router) => ({
     },
     {
       id: 2,
-      title: 'Website Design and Development',
+      title: 'Website Design',
       description:
         "Combining branding and graphics, we specialise in designing and developing bespoke websites to help your business stand out. This is an opportunity to create your vision for your online presence utilising the support from our design and development team to deliver a website that can establishing credibility and connecting with online customers.",
       imageUrl: 'assets/images/design/web-design.jpg',

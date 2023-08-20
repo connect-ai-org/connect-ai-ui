@@ -37,7 +37,7 @@
     </div>
     <div class="col-md-12 mb-2">
       <mat-form-field class="w-100" appearance="outline">
-        <mat-label>Ticket</mat-label>
+        <mat-label>Message</mat-label>
         <textarea matInput formControlName="ticket" placeholder="Ticket" rows="5" required ></textarea>
         <mat-error *ngIf="form.get('ticket')?.hasError">{{ getErrorMessage('ticket') }}</mat-error>
       </mat-form-field>

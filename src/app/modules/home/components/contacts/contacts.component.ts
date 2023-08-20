@@ -72,4 +72,11 @@ export class ContactsComponent implements OnInit {
       this.uiService.scrollToId(CONTACT_FORM_IDS.SUPPORT_TICKET, -136);
     }, 200);
   }
+
+  onFormSubmitted(): void {
+    this.showForm(null);
+    setTimeout(() => {
+      this.uiService.scrollToTop();
+    }, 200);
+  }
 }
