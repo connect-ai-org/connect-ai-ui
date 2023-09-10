@@ -16,7 +16,7 @@ const routes: Routes = [
       { path: 'design', component: DesignPageComponent },
       { path: 'digital', component: DigitalPageComponent },
       { path: 'marketing', component: MarketingPageComponent },
-      { path: 'contact', component: ContactPageComponent },
+      // { path: 'contact', component: ContactPageComponent },
     ]
   }
 ];

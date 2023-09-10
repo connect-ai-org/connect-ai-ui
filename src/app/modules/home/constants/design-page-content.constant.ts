@@ -14,7 +14,8 @@ export const DESIGN_PAGE_CONTENT = (router: Router) => ({
       action1: 'see more',
       action: 'ENQUIRE NOW',
       onActionClicked: () => {
-        router.navigate(['contact']);
+        sessionStorage.setItem('anchorId', 'contact');
+        router.navigate(['']);
       },
     },
     {
@@ -27,7 +28,8 @@ export const DESIGN_PAGE_CONTENT = (router: Router) => ({
       imageDescription: 'Graphic Design',
       action: 'ENQUIRE NOW',
       onActionClicked: () => {
-        router.navigate(['contact']);
+        sessionStorage.setItem('anchorId', 'contact');
+        router.navigate(['']);
       },
     },
     {
@@ -39,7 +41,8 @@ export const DESIGN_PAGE_CONTENT = (router: Router) => ({
       imageDescription: 'Website Design',
       action: 'ENQUIRE NOW',
       onActionClicked: () => {
-        router.navigate(['contact']);
+        sessionStorage.setItem('anchorId', 'contact');
+        router.navigate(['']);
       },
     },
   ],

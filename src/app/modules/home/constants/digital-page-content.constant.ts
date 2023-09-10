@@ -11,7 +11,10 @@ export const DIGITAL_PAGE_CONTENT = (router: Router) => ({
       imageDescription: 'Websites',
       action: 'Enquire Now',
       navigateUrl: '/contact',
-      onActionClicked: () => { router.navigate(['contact']) }
+      onActionClicked: () => { 
+        sessionStorage.setItem('anchorId', 'contact');
+        router.navigate(['']);
+      }
     },
     {
       id: 0,
@@ -21,7 +24,10 @@ export const DIGITAL_PAGE_CONTENT = (router: Router) => ({
       imageDescription: 'Google Ads',
       action: 'Enquire Now',
       navigateUrl: '/contact',
-      onActionClicked: () => { router.navigate(['contact']) }
+      onActionClicked: () => { 
+        sessionStorage.setItem('anchorId', 'contact');
+        router.navigate(['']);
+      }
     },
     {
       id: 1,
@@ -41,7 +47,10 @@ export const DIGITAL_PAGE_CONTENT = (router: Router) => ({
       imageDescription: 'Video',
       action: 'Enquire Now',
       navigateUrl: '/contact',
-      onActionClicked: () => { router.navigate(['contact']) }
+      onActionClicked: () => { 
+        sessionStorage.setItem('anchorId', 'contact');
+        router.navigate(['']);
+       }
     },
   ]
 });

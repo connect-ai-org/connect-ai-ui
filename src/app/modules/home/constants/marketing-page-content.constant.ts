@@ -11,7 +11,10 @@ export const MARKETING_PAGE_CONTENT = (router: Router) => ({
       imageDescription: 'Planning and Strategy',
       action: 'Enquire Now',
       navigateUrl: '/contact',
-      onActionClicked: () => { router.navigate(['contact']) }
+      onActionClicked: () => { 
+        sessionStorage.setItem('anchorId', 'contact');
+        router.navigate(['']);
+       }
     },
     {
       id: 1,
@@ -21,7 +24,10 @@ export const MARKETING_PAGE_CONTENT = (router: Router) => ({
       imageDescription: 'Content and Copywriting',
       action: 'Enquire Now',
       navigateUrl: '/contact',
-      onActionClicked: () => { router.navigate(['contact']) }
+      onActionClicked: () => { 
+        sessionStorage.setItem('anchorId', 'contact');
+        router.navigate(['']);
+       }
     }
   ]
 });
