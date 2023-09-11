@@ -21,7 +21,7 @@ export interface IContact {
   lastName: string,
   phone: string,
   email: string,
-  website?: string,
+  company?: string,
   message: string,
 }
 
@@ -31,5 +31,5 @@ export interface ISupportTicket {
   phone: string,
   email: string,
   ticket: string,
-  attachments?: IFile[]
+  attachments?: File[]
 }

@@ -62,7 +62,7 @@ export const FOOTER_CONTENT = {
     heading: 'Contact Us',
     address: 'Harrison, ACT, 2914',
     phone: '0414 001 427',
-    email: 'sophie.vo@connectai.au',
+    email: 'contact@connectai.au',
   },
   quickLinks: {
     heading: 'Quick Links',

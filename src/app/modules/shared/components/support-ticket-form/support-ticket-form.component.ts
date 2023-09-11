@@ -18,13 +18,14 @@ export class SupportTicketFormComponent implements OnInit {
   @ViewChild('ngForm')
   ngForm!: NgForm;
 
+  attachments: File[] = [];
+
   form = new FormGroup({
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('', Validators.required),
     ticket: new FormControl('', Validators.required),
-    attachments: new FormControl([], []),
   });
 
   CONTACT_FORM_IDS = CONTACT_FORM_IDS;
@@ -53,7 +54,7 @@ export class SupportTicketFormComponent implements OnInit {
       email: formValue.email || '',
       phone: formValue.phone || '',
       ticket: formValue.ticket || '',
-      attachments: formValue.attachments || [],
+      attachments: this.attachments
     };
 
     this.contactsService

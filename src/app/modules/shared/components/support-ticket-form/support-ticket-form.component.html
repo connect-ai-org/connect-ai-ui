@@ -44,7 +44,7 @@
     </div>
     <p class="help">Please describe your support enquiry. Include what you have tried; any error messages received; or your desired outcome. Attach any files or screenshots below.</p>
     <div class="col-md-6 mb-2">
-      <app-files-drag-drop></app-files-drag-drop>
+      <app-files-drag-drop [files]="attachments"></app-files-drag-drop>
     </div>
     <div class="col-md-12 d-flex justify-content-end">
       <button mat-flat-button type="submit" class="btn-submit" color="primary">Submit</button>

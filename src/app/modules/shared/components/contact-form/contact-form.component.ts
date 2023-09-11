@@ -52,6 +52,7 @@ export class ContactFormComponent implements OnInit {
       email: formValue.email || '',
       phone: formValue.phone || '',
       message: formValue.message || '',
+      company: formValue.company || '',
     };
 
     this.contactsService

@@ -1,5 +1,5 @@
 import { getImageConfig } from './../../helpers/file.helper';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-files-drag-drop',
@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./files-drag-drop.component.scss']
 })
 export class FilesDragDropComponent implements OnInit {
+  @Input() files: File[] = [];
+  
   getImageConfig = getImageConfig;
-
   isDragOver: boolean = false;
-  files: any[] = [];
 
   constructor() { }
 
