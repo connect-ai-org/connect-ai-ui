@@ -1,0 +1,18 @@
+<header class="header" [ngClass]="{ 'nav-open': isOpenMenu }">
+  <div class="container">
+    <a [href]="HEADER_CONTENT.logo.link">
+      <img class="logo" [src]="HEADER_CONTENT.logo.imageUrl" [alt]="HEADER_CONTENT.logo.description" />
+    </a>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li *ngFor="let item of HEADER_CONTENT.navLinks">
+          <a class="main-nav-link" [href]="item.link" (click)="item.onClick()"><span>{{ item.label }}</span></a>
+        </li>
+      </ul>
+    </nav>
+    <button class="btn-mobile-nav" (click)="onToggleMenu()">
+      <ion-icon *ngIf="!isOpenMenu" class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon *ngIf="isOpenMenu" class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+  </div>
+</header>

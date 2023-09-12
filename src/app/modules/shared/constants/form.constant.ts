@@ -1,0 +1,20 @@
+export const INDUSTRY_OPTIONS = [
+  'Industry',
+  'Accommodation',
+  'Retail',
+  'Arts',
+  'Construction',
+  'Education',
+  'Food & Wine or Hospitality',
+  'Health',
+  'Not-for-Profit',
+  'Professional Service',
+  'Sports',
+  'Tourism',
+  'Agriculture, Forestry & Fishing',
+  'Financial & Insurance',
+  'Administration',
+  'IT',
+  'Real Estate',
+  'Other'
+];

@@ -1,0 +1,118 @@
+@import "colors";
+@import "mixins";
+
+.footer {
+  background-color: $primary;
+  
+  .line {
+    height: 2px;
+    background: $gradient;
+  }
+
+  .logo {
+    height: 56px;
+
+    @include small-tablet {
+      height: 40px;
+    }
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 64px 0 32px;
+
+    .logo-col {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .footer-logo {
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      padding-left: 0;
+    }
+
+    .footer-heading {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: $gray-tint-80;
+    }
+    
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-link:link,
+    .footer-link:visited {
+      text-decoration: none;
+      font-size: 14px;
+      color: $white;
+      transition: all 0.3s;
+    }
+    
+    .footer-link:hover,
+    .footer-link:active {
+      color: $gray-tint-80;
+    }
+
+    .social-links {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+
+    .social-icon {
+      height: 32px;
+      width: 32px;
+    }
+
+    .contacts p.address {
+      color: $gray-tint-80;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 32px 24px;
+
+      .nav-col {
+        grid-row: 1;
+        margin-bottom: 32px;
+      }
+    }
+
+    @include mobile {
+      .footer-heading {
+        font-size: 16px;
+      }
+
+      .footer-link:link,
+      .footer-link:visited,
+      p.address {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    background-color: $primary;
+    padding: 16px 0;
+
+    .paragraph {
+      color: white;
+      margin: 0;
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '@angular/material/theming';
+
+// MAT FORM FIELD
+mat-form-field {
+  font-size: 16px;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 8px 0 10px;
+}
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: $primary;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-start, 
+.mat-form-field-appearance-outline .mat-form-field-outline-gap,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-width: 1px !important;
+}
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-start, 
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-gap,
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-end {
+  border-width: 2px !important;
+}
+.mat-form-field-label-wrapper {
+  top: -16px;
+}
+.mat-form-field-label-wrapper label {
+  font-size: 14px;
+}
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: $primary;
+}
+
+// RADIO BUTTON
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  border-color: $primary; 
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+  color: $primary;
+  background-color: $primary;
+}
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color: $primary !important;
+}
+
+// BUTTON
+.icon-button .mat-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.mat-flat-button.mat-primary, 
+.mat-raised-button.mat-primary, 
+.mat-fab.mat-primary, 
+.mat-mini-fab.mat-primary {
+  background-color: $primary;
+  min-width: 100px;
+}
+
+.mat-flat-button.mat-primary:not(:disabled):hover, 
+.mat-raised-button.mat-primary:not(:disabled):hover, 
+.mat-fab.mat-primary:not(:disabled):hover, 
+.mat-mini-fab.mat-primary:not(:disabled):hover {
+  background-color: $primary-shade-20;
+}
+
+.mat-stroked-button.mat-primary {
+  color: $primary;
+  border-color: $primary;
+  border-width: 2px;
+}
+.mat-stroked-button.mat-primary:not(:disabled):hover {
+  background-color: $primary-tint-80;
+}
+
+.mat-simple-snackbar-action {
+  color: #47c2f8;
+}

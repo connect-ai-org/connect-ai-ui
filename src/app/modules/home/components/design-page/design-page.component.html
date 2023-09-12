@@ -1,0 +1,42 @@
+<div class="page-name d-flex justify-content-center aligns-items-center">
+  <h2 class="heading-secondary">{{ DESIGN_PAGE_CONTENT.pageName }}</h2>
+</div>
+<div class="page-content">
+  <div class="container">
+    <div class="navigation row d-flex justify-content-start aligns-items-center py-3">
+      <div class="p-0">
+        <a href="/#services">
+          <button mat-stroked-button color="primary" class="btn-back icon-button">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            Services
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="items">
+      <div *ngFor="let item of DESIGN_PAGE_CONTENT.items" class="item row d-flex justify-content-between">
+        <div class="text-box col-xl-9 col-lg-8">
+          <div class="text">
+            <h3 class="heading-tertiary">{{ item.title }}</h3>
+            <p class="paragraph">{{ item.description }}</p>
+          </div>
+          <div class="action">
+            <button 
+              *ngIf="item.action" 
+              mat-flat-button 
+              color="primary" 
+              class="btn-back icon-button"
+              (click)="item.onActionClicked()"
+            >
+              {{ item.action }}
+              <ion-icon name="arrow-forward-outline" class="btn-back-icon"></ion-icon>
+            </button>
+          </div>
+        </div>
+        <div class="img-box col-xl-3 col-lg-4">
+          <img class="img" [src]="item.imageUrl" [alt]="item.imageDescription" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

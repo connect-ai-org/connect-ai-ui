@@ -1,0 +1,56 @@
+<div class="form" [id]="CONTACT_FORM_IDS.CONTACT" >
+  <h3 class="heading-tertiary">Contact Us</h3>
+  <p class="help">"<span class="error">*</span>" indicates required field</p>
+  <form 
+    #ngForm="ngForm"
+    [formGroup]="form" 
+    (ngSubmit)="onSubmit()" 
+    class="contact-form row"
+  >
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" placeholder="Enter your first name" required >
+        <mat-error *ngIf="form.get('firstName')?.hasError">{{ getErrorMessage('firstName') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" placeholder="Enter your last name" required >
+        <mat-error *ngIf="form.get('lastName')?.hasError">{{ getErrorMessage('lastName') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Email Address</mat-label>
+        <input matInput formControlName="email" placeholder="Enter your email" required >
+        <mat-error *ngIf="form.get('email')?.hasError">{{ getErrorMessage('email') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" placeholder="Enter your phone" required >
+        <mat-error *ngIf="form.get('phone')?.hasError">{{ getErrorMessage('phone') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Company</mat-label>
+        <input matInput formControlName="company" placeholder="Enter your company" >
+        <mat-error *ngIf="form.get('company')?.hasError">{{ getErrorMessage('company') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-12 mb-2">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Message</mat-label>
+        <textarea matInput formControlName="message" placeholder="Message" rows="5" required ></textarea>
+        <mat-error *ngIf="form.get('message')?.hasError">{{ getErrorMessage('message') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-12 d-flex justify-content-end">
+      <button mat-flat-button type="submit" class="btn-submit" color="primary">Submit</button>
+    </div>
+  </form>
+</div>

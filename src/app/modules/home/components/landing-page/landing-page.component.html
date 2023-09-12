@@ -1,0 +1,62 @@
+<!-- HERO -->
+<section id="hero" class="section-hero">
+  <div class="container hero d-flex aligns-item-center justify-content-center">
+    <div class="hero-text-box text-center">
+      <!-- <h1 class="heading-primary mb-4">{{ LANDING_PAGE_CONTENT.websiteName }}</h1> -->
+      <h1 class="heading-primary mb-4">
+        <img class="website-name-img" src="assets/images/connect-ai-logo-1.png" />
+      </h1>
+      <h2 class="heading-secondary">
+        <span
+          typingAnimator
+          [sentences]="[LANDING_PAGE_CONTENT.slogan]"
+          [typeSpeed]="100"
+          [deleteSpeed]="20"
+          [startDelay]="1000"
+          [showCursor]="false"
+        ></span>
+        &nbsp;
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- SERVICES -->
+<section id="services" class="section-services">
+  <div class="container services">
+    <h2 class="section-title heading-secondary text-center">Services</h2>
+    <div class="row pt-4">
+      <div *ngFor="let service of LANDING_PAGE_CONTENT.services" class="col-lg-4 mb-5 service">
+        <a [routerLink]="service.routing">
+          <img class="service-img" [src]="service.imageUrl" [alt]="service.imageDescription">
+          <div class="service-img-overlay"></div>
+          <div class="service-content">
+            <p class="service-title">{{ service.name }}</p>
+            <p class="service-description paragraph">{{ service.description }}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ABOUT US -->
+<section id="about" class="section-about">
+  <div class="content">
+    <div class="container about row d-flex align-items-center justify-content-between">
+      <div class="col-lg-6">
+        <div class="img-container">
+          <img [src]="LANDING_PAGE_CONTENT.about.imageUrl" [alt]="LANDING_PAGE_CONTENT.about.imageDescription" />
+        </div>
+      </div>
+      <div class="col-lg-6 txt-container">
+        <h2 class="section-title heading-secondary text-center">About Us</h2>
+        <p class="paragraph text-center mb-5">{{ LANDING_PAGE_CONTENT.about.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="section-contact">
+  <div class="container-contact">
+    <app-contacts [isWhiteColor]="true"></app-contacts>
+  </div>
+</section>

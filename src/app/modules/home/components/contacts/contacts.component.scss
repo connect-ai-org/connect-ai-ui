@@ -1,0 +1,133 @@
+@import "colors";
+@import "mixins";
+
+.page-name {
+  background-color: $primary;
+  padding: 48px 0 32px;
+  
+  h2.heading-secondary {
+    margin-bottom: 60px;
+    position: relative;
+    color: $white;
+
+    &::after {
+      position: absolute;
+      bottom: -24px;
+      left: 0;
+      right: 0;
+      content: '';
+      width: 100px;
+      height: 2px;
+      background: $gradient;
+      margin: 0 auto;
+    }
+
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+}
+
+.items {
+  .item-wrapper {
+    width: calc(100% / 3);
+    padding: 0 24px;
+    margin-bottom: 48px;
+    z-index: 1;
+
+    @include small-desktop {
+      width: 50%;
+    }
+
+    @include small-tablet {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .item {
+    background-color: $white;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.075);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 400px;
+    padding: 32px;
+
+    @include small-tablet {
+      height: 360px;
+    }
+
+    @include mobile {
+      height: fit-content;
+    }
+
+    .title {
+      text-align: center;
+      position: relative;
+
+      .icon {
+        font-size: 48px;
+        margin-bottom: 8px;
+        color: #ffc925;
+      }
+
+      .heading-tertiary {
+        margin-bottom: 48px;
+        color: $primary;
+      }
+
+      .heading-tertiary::after {
+        position: absolute;
+        bottom: -24px;
+        left: 0;
+        right: 0;
+        content: '';
+        width: 100px;
+        height: 2px;
+        background: $gradient;
+        margin: 0 auto;
+      }
+    }
+
+    .paragraph {
+      color: $gray-tint-40;
+    }
+  }
+
+  .action {
+    button {
+      width: 200px;
+      padding: 4px;
+      font-size: 18px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $primary;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.forms {
+  padding: 56px 24px;
+}
+
+.white-color {
+  .page-name {
+    background-color: $white !important;
+    padding-bottom: 0;
+
+    h2.heading-secondary {
+      color: $primary !important;
+    }
+  }
+
+  .forms {
+    padding-top: 0 !important;
+  }
+}

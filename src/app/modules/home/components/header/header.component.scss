@@ -1,0 +1,166 @@
+@import "colors";
+@import "mixins";
+
+.header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.03);
+  
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.logo {
+  height: 36px;
+}
+
+.main-nav {
+  
+  .main-nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 0;
+
+    .main-nav-link {
+      cursor: pointer;
+    }
+
+    .main-nav-link > span {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      color: $gray;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 8px 0;
+    }
+
+    .main-nav-link > span {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-image: $gradient;
+        visibility: visible;
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        -ms-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+      }
+    }
+
+    .main-nav-link:hover > span,
+    .main-nav-link:active > span {
+      &::before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  
+  .icon-mobile-nav {
+    height: 32px;
+    width: 32px;
+    color: $gray;
+  }
+}
+
+@include small-tablet {
+  .header {
+    background-color: $white;
+  }
+
+  .header .container {
+    margin-left: 0;
+    margin-left: 0;
+    max-width: unset;
+  }
+
+  .main-nav {
+    background-color: $white;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    // height: 100vh;
+    transform: translateX(100%);
+  
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+  
+    /* 1) Hide it visually */
+    opacity: 0;
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    padding: 0;
+    gap: 0px !important;
+  }
+
+  .main-nav-list li {
+    padding: 8px;
+  }
+
+  .main-nav-link:hover > span,
+  .main-nav-link:active > span {
+    &::before {
+      display: none;
+    }
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .logo {
+    height: 28px;
+  }
+}

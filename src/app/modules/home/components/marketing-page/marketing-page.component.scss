@@ -1,0 +1,142 @@
+@import "colors";
+@import "mixins";
+
+.page-name {
+  background-color: $primary;
+  height: 80px;
+  margin-top: 80px;
+
+  h2.heading-secondary {
+    margin: auto;
+    color: white;
+    // background: $gradient;
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+  }
+}
+
+.page-content {
+  padding-bottom: 100px;
+
+  .items {
+    margin: 0 -28px;
+
+    .item-wrapper {
+      padding: 0 16px;
+    }
+
+    .item {
+      padding: 0 !important;
+      margin-bottom: 48px;
+
+      .text-box {
+        padding: 0;
+
+        .heading-tertiary {
+          position: relative;
+          font-size: 32px;
+          margin-bottom: 48px;
+          color: $primary;
+        }
+
+        .heading-tertiary::after {
+          position: absolute;
+          bottom: -24px;
+          left: 0;
+          right: 0;
+          content: '';
+          width: 80px;
+          height: 2px;
+          background: $gradient;
+          margin-left: 0;
+          visibility: visible;
+        }
+      }
+
+      .action {
+        margin-top: 28px;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        &:hover {
+          transform: translateY(-4px);
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          background: $gradient;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .icon {
+          font-size: 18px;
+          margin-left: 4px;
+          color: #ff1b20;
+        }
+      }
+    }
+  }
+}
+
+.img-box {
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+
+  .img {
+    width: 100%;
+    height: 350px;
+    transition: all 0.4s;
+  }
+
+  .img:hover {
+    transform: scale(1.1);
+  }
+}
+
+@include tablet {
+  .page-content {
+    .container {
+      max-width: unset;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    padding-bottom: 0;
+  }
+
+  .img-box {
+    .img {
+      height: 450px;
+    }
+  }
+}
+
+@include mobile {
+  .page-content {
+    .container {
+      max-width: unset;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .img-box {
+    .img {
+      height: 300px;
+    }
+  }
+
+  .action {
+    button {
+      width: 100%;
+    }
+  }
+}
