@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   title: 'Production Environment',
-  apiURL: 'http://localhost:3000/api/v1'
+  apiURL: 'https://connect-ai-server.onrender.com/api/v1'
 };
