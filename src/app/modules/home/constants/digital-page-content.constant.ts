@@ -37,7 +37,10 @@ export const DIGITAL_PAGE_CONTENT = (router: Router) => ({
       imageDescription: 'Social Media',
       action: 'Enquire Now',
       navigateUrl: '/contact',
-      onActionClicked: () => { router.navigate(['contact']) }
+      onActionClicked: () => { 
+        sessionStorage.setItem('anchorId', 'contact');
+        router.navigate(['']);
+      }
     },
     {
       id: 2,
