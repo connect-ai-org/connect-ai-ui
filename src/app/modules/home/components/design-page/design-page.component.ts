@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DESIGN_PAGE_CONTENT } from './../../constants/design-page-content.constant';
+import { UserInterfaceService } from 'src/app/modules/shared/services/user-interface.service';
 
 @Component({
   selector: 'app-design-page',
@@ -11,9 +12,16 @@ import { DESIGN_PAGE_CONTENT } from './../../constants/design-page-content.const
 export class DesignPageComponent implements OnInit {
   DESIGN_PAGE_CONTENT;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private uiService: UserInterfaceService
+  ) {
     this.DESIGN_PAGE_CONTENT = DESIGN_PAGE_CONTENT(router);
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    setTimeout(() => {
+      this.uiService.scrollToTop();
+    }, 100);
+  }
 }
